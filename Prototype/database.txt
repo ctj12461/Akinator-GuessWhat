@@ -1,0 +1,7 @@
+Can you speak?
+cat
+@@null@@
+@@null@@
+human
+@@null@@
+@@null@@
