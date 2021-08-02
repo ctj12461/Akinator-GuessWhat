@@ -1,6 +1,10 @@
 #include "ExtendedNode.h"
 #include "LogicalNode.h"
 
+#include <string>
+
+using namespace std;
+
 namespace Model {
 
 /**
@@ -14,8 +18,9 @@ QueryNode::QueryNode(string t) : LogicalNode(NodeEnum::Query, t) {
 
 /**
  * 析构函数
+ * @date  2021-08-01
  */
-QueryNode::~QueryNode() {
+QueryNode::~QueryNode() noexcept {
 
 }
 
@@ -50,8 +55,9 @@ AnswerNode::AnswerNode(string t = "") : LogicalNode(NodeEnum::Answer, t) {
 
 /**
  * 析构函数
+ * @date  2021-08-01
  */
-AnswerNode::~AnswerNode() {
+AnswerNode::~AnswerNode() noexcept {
 
 }
 

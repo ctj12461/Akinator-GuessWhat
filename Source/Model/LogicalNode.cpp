@@ -1,5 +1,9 @@
 #include "LogicalNode.h"
 
+#include <string>
+
+using namespace std;
+
 namespace Model {
 
 /**
@@ -8,13 +12,15 @@ namespace Model {
  * @param t          初始文本
  * @date  2021-08-01
  */
-void LogicalNode::LogicalNode(NodeEnum n, string t) noexcept {
+void LogicalNode::LogicalNode(NodeEnum n, string t) noexcept 
+    : uuid(LogicalNode::null) {
 	type = n;
 	text = t;
 }
 
 /**
  * 析构函数
+ * @date  2021-08-01
  */
 LogicalNode::~LogicalNode() noexcept {
 	
@@ -57,12 +63,38 @@ bool LogicalNode::isEnd() const noexcept {
 }
 
 /**
+ * 返回网络中的前驱结点
+ * @return [description]
+ * @date   2021-08-01
+ */
+UuidType LogicalNode::getPrevious() const noexcept {
+    return previous;
+}
+
+/**
  * 设置当前结点的文本
  * @param t          要设置的文本
  * @date  2021-08-01
  */
 void LogicalNode::setText(string t) noexcept {
 	text = t;
+}
+
+/**
+ * 设置当前结点的UUID
+ * @date 2021-08-01
+ */
+void LogicalNode::setUuid(UuidType id) noexcept {
+    uuid = id;
+}
+
+/**
+ * 设置网络中的前驱结点
+ * @param  id         前驱结点的 UUID
+ * @date   2021-08-01
+ */
+void Logical::setPrevious(UuidType id) noexcept {
+    previous = id;
 }
 
 }

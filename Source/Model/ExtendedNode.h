@@ -1,18 +1,20 @@
 #ifndef EXTENDED_NODE
 #define EXTENDED_NODE
 
+#include "Definition.h"
+
+#include <string>
+
+using namespace std;
+
 namespace Model {
 
 class LogicalNode;
 
 class QueryNode : public LogicalNode {
 public:
-	enum class BranchEnum {
-		No, Yes
-	};
-
 	QueryNode(string t = "");
-	~QueryNode();
+	~QueryNode() noexcept;
 
 	UuidType getBranch(BranchEnum b) const noexcept;
 
@@ -24,7 +26,7 @@ private:
 class AnswerNode : public LogicalNode {
 public:
 	AnswerNode(string t = "");
-	~AnswerNode();
+	~AnswerNode() noexcept;
 };
 
 }
