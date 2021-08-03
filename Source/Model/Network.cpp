@@ -157,6 +157,14 @@ void Network::extend(string query, string answer, BranchEnum which) {
 	ap->setPrevious(qp->getUuid());
 	qp->setBranch(which, ap->getUuid());
 	qp->setBranch(other(which), p->getUuid());
+    /** 设置 qp 前驱的后继 */
+    if (qp->getPrevious() == LogicalNode::null)
+        return;
+    QueryNode *pp = dynamic_cast<QueryNode *>(deref(qp->getPrevious()));
+    if (pp->getBranch(BranchEnum::Yes) == current)
+        pp->setBranch(BranchEnum::Yes, qp->getUuid());
+    else
+        pp->setBranch(BranchEnum::No, qp->getUuid());
 }
 
 /**

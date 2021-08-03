@@ -1,6 +1,7 @@
 #include "NodePool.h"
 #include "LogicalNode.h"
 #include "ExtendedNode.h"
+#include "Database.h"
 
 #include <vector>
 #include <cmath>
@@ -39,7 +40,7 @@ DataBlock::~DataBlock() {
  */
 vector<string> DataBlock::serialize() const {
 	string space(" ");
-	std::vector<string> res;
+	vector<string> res;
 
 	for (UuidType i = 0; i < size; ++i) {
 		LogicalNode *p = nodes[i];
@@ -247,10 +248,13 @@ void NodePool::save() {
 	for (auto p : blocks) {
 		if (p.second == nullptr)
 			continue;
-		DatabaseBlock block(p.second->serialize());
-		block.setUuid(p.first);
-		database->setBlock(block);
+		DatabaseBlock block(p.first, p.second->serialize());
+		database->setBlock(p.first, block);
 	}
+	DatabaseAttribute attr = database->getAttribute();
+	attr.total = total;
+	attr.blockTotal = blockTotal;
+	database->setAttribute(attr);
 }
 
 /**
