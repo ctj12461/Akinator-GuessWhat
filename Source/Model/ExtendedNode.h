@@ -2,6 +2,7 @@
 #define EXTENDED_NODE
 
 #include "Definition.h"
+#include "LogicalNode.h"
 
 #include <string>
 
