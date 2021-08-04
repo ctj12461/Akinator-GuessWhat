@@ -1,5 +1,5 @@
-#ifndef DEFINATION
-#define DEFINATION
+#ifndef DEFINITION
+#define DEFINITION
 
 /**
  * 数据库格式

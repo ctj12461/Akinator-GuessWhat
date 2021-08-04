@@ -12,7 +12,7 @@ namespace Model {
  * @param t          初始文本
  * @date  2021-08-01
  */
-void LogicalNode::LogicalNode(NodeEnum n, string t) noexcept 
+LogicalNode::LogicalNode(NodeEnum n, string t) noexcept 
     : uuid(LogicalNode::null) {
 	type = n;
 	text = t;
@@ -93,7 +93,7 @@ void LogicalNode::setUuid(UuidType id) noexcept {
  * @param  id         前驱结点的 UUID
  * @date   2021-08-01
  */
-void Logical::setPrevious(UuidType id) noexcept {
+void LogicalNode::setPrevious(UuidType id) noexcept {
     previous = id;
 }
 

@@ -49,7 +49,7 @@ void QueryNode::setBranch(BranchEnum b, UuidType id) noexcept {
  * @param t          初始文本
  * @date  2021-08-01
  */
-AnswerNode::AnswerNode(string t = "") : LogicalNode(NodeEnum::Answer, t) {
+AnswerNode::AnswerNode(string t) : LogicalNode(NodeEnum::Answer, t) {
 
 }
 

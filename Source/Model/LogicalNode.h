@@ -12,8 +12,6 @@ namespace Model {
 class LogicalNode {
 public:
 	static constexpr UuidType null = 0;
-	LogicalNode(NodeEnum n, string t = "");
-	~LogicalNode() noexcept;
 	
 	NodeEnum getType() const noexcept;
 	string getText() const noexcept;
@@ -29,6 +27,9 @@ protected:
 	string text;
 	UuidType uuid;
 	UuidType previous;
+
+	LogicalNode(NodeEnum n, string t = "") noexcept;
+	~LogicalNode() noexcept;
 };
 
 }
