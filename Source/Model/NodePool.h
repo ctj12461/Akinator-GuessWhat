@@ -16,7 +16,6 @@ class LogicalNode;
 class QueryNode;
 class AnswerNode;
 
-/** TODO，提供与数据库交互程序 */
 class DatabaseController;
 
 class DataBlock {
@@ -31,6 +30,9 @@ public:
 
 	QueryNode *newQueryNode(string text, UuidType id);
 	AnswerNode *newAnswerNode(string text, UuidType id);
+
+	UuidType getSize() const;
+	LogicalNode *get(UuidType id) const;
 private:
 	LogicalNode *nodes[BlockSize];
 	UuidType size;
@@ -38,7 +40,7 @@ private:
 
 class NodePool {
 public:
-	NodePool();
+	NodePool(DatabaseController *p = nullptr);
 	~NodePool();
 
 	void setDatabaseController(DatabaseController *p);
@@ -54,7 +56,7 @@ private:
 	UuidType blockTotal;
 	DatabaseController *database;
 
-	bool exist(UuidType uuid) const noexcept;
+	bool exist(UuidType uuid) noexcept;
 	UuidType getBlockId(UuidType uuid) const noexcept;
 	UuidType newDataBlock();
 };

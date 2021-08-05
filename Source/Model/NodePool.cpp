@@ -3,12 +3,14 @@
 #include "ExtendedNode.h"
 #include "Database.h"
 
+#include <sstream>
 #include <vector>
 #include <cmath>
 #include <utility>
 #include <string>
 #include <unordered_map>
 #include <functional>
+#include <iostream>
 
 using namespace std;
 
@@ -78,6 +80,7 @@ void DataBlock::deserialize(const vector<string> &data) {
 	LogicalNode *p = nullptr;
 
 	for (string s : data) {
+		iss.clear();
 		iss.str(s);
 		iss >> uuid >> prevUuid >> now;
 		/** 判断是 Query 还是 Answer 结点 */
@@ -86,24 +89,19 @@ void DataBlock::deserialize(const vector<string> &data) {
 			/** 去掉空格等字符 */
 			while (isalnum(iss.peek()) == false)
 				iss.get();
-			
-			QueryNode *qp = newQueryNode(iss.rdbuf(), uuid);
+			getline(iss, text);
+			QueryNode *qp = newQueryNode(text, uuid);
 			qp->setPrevious(prevUuid);
 			qp->setBranch(BranchEnum::Yes, yesUuid);
 			qp->setBranch(BranchEnum::No, noUuid);
-			p = static_cast<LogicalNode *>(qp);
 		} else {
 			/** 去掉空格等字符 */
 			while (isalnum(iss.peek()) == false)
 				iss.get();
-
-			AnswerNode *ap = newAnswerNode(iss.rdbuf(), uuid);
+			getline(iss, text);
+			AnswerNode *ap = newAnswerNode(text, uuid);
 			ap->setPrevious(prevUuid);
-			p = static_cast<LogicalNode *>(ap);
 		}
-		if (p == nullptr)
-			continue;
-		nodes[size++] = p;
 	}
 }
 
@@ -138,14 +136,31 @@ AnswerNode *DataBlock::newAnswerNode(string text, UuidType id) {
 }
 
 /**
+ * 返回结点数大小
+ * @return 大小
+ * @date   2021-08-05
+ */
+UuidType DataBlock::getSize() const {
+	return size;
+}
+
+/**
+ * 返回指定下标的结点的指针
+ * @param  id         下标
+ * @return            指针
+ * @date   2021-08-05
+ */
+LogicalNode *DataBlock::get(UuidType id) const {
+	return nodes[id];
+}
+
+/**
  * 构造函数，初始化数据库的结点数 (不是已加载的结点数) 等信息
  * @date   2021-08-02
  */
-NodePool::NodePool(DatabaseController *p = nullptr) : database(p) {
-	/**
-	 * TODO，DatabaseController 需要可以返回数据库属性
-	 * DatabaseAttribute，其至少有 total, name 等属性
-	 */
+NodePool::NodePool(DatabaseController *p) : database(p) {
+	if (p == nullptr)
+		return;
 	DatabaseAttribute attr = database->getAttribute();
 	total = attr.total;
 	blockTotal = attr.blockTotal;
@@ -172,6 +187,9 @@ NodePool::~NodePool() {
  */
 void NodePool::setDatabaseController(DatabaseController *p) {
 	database = p;
+	DatabaseAttribute attr = database->getAttribute();
+	total = attr.total;
+	blockTotal = attr.blockTotal;
 }
 
 /**
@@ -221,7 +239,7 @@ AnswerNode *NodePool::newAnswerNode(string text) {
  * @return            指针
  * @date 2021-08-02
  */
-void NodePool::getDatabaseController() const noexcept {
+DatabaseController *NodePool::getDatabaseController() const noexcept {
 	return database;
 }
 
@@ -234,14 +252,18 @@ void NodePool::getDatabaseController() const noexcept {
  */
 void NodePool::load(function<void(LogicalNode *)> f, UuidType id) {
 	int blockid = getBlockId(id);
-	if (exist(blockid) == false)
+	if (blockid > blockTotal)
+		return;
+	if (exist(blockid) == true)
 		return;
 	DatabaseBlock block = database->getBlock(blockid);
-	/**
-	 * TODO，数据库控制器返回 DatabaseBlock，表示一个块的数据，
-	 * 即 data (vector<string>)
-	 */
-	blocks[blockid]->deserialize(block.data);
+	DataBlock *p = new DataBlock;
+	if (p == nullptr)
+		return;
+	blocks[blockid] = p;
+	p->deserialize(block.data);
+	for (UuidType i = 0; i < p->getSize(); ++i)
+		f(p->get(i));
 }
 
 void NodePool::save() {
@@ -263,8 +285,8 @@ void NodePool::save() {
  * @return            判断结果
  * @date   2021-08-02
  */
-bool NodePool::exist(UuidType id) const noexcept {
-	return blocks.find(id) != blocks.end() && blocks[id] != nullptr;
+bool NodePool::exist(UuidType id) noexcept {
+	return blocks.find(id) != blocks.end() && (blocks[id]) != nullptr;
 }
 
 /**
@@ -282,9 +304,11 @@ UuidType NodePool::getBlockId(UuidType uuid) const noexcept {
  * @return 新的块的 UUID
  * @date   2021-08-02
  */
-UuidType NodePool::newDataBlock();
+UuidType NodePool::newDataBlock() {
 	++blockTotal;
 	DataBlock *p = new DataBlock;
 	blocks[blockTotal] = p;
 	return blockTotal;
+}
+
 }
