@@ -4,12 +4,12 @@
 /**
  * 数据库格式
  * 1.基本信息
- * 储存在 [name].gw-header 里：
+ * 储存在 [name].gwdb-header 里：
  * [name]
  * [total]
  * [blockTotal]
  * 2. 结点信息
- * 储存在 [blockID].gw-data 里
+ * 储存在 [blockID].gwdb-data 里
  */
 
 /**

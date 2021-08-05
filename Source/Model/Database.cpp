@@ -28,7 +28,7 @@ DatabaseController::~DatabaseController() {
  * @date  2021-08-03
  */
 void DatabaseController::open(string name) {
-	string headerName = name + string(".gw-header");
+	string headerName = name + string(".gwdb-header");
 	ifstream ifs(headerName);
 	ifs >> attribute.name;
 	ifs >> attribute.total;
@@ -41,11 +41,11 @@ void DatabaseController::open(string name) {
  * @date  2021-08-03
  */
 void DatabaseController::close() {
-	string headerName = attribute.name + string(".gw-header");
+	string headerName = attribute.name + string(".gwdb-header");
 	ofstream ofs(headerName);
-	ofs << attribute.name;
-	ofs << attribute.total;
-	ofs << attribute.blockTotal;
+	ofs << attribute.name << endl;
+	ofs << attribute.total << endl;
+	ofs << attribute.blockTotal << endl;
 	ofs.close();
 }
 
@@ -65,11 +65,11 @@ DatabaseAttribute DatabaseController::getAttribute() const {
  * @date   2021-08-03
  */
 DatabaseBlock DatabaseController::getBlock(UuidType id) const {
-	string dataName = to_string(id) + string(".gw-data");
+	string dataName = to_string(id) + string(".gwdb-data");
 	string buf;
 	DatabaseBlock block;
 	ifstream ifs(dataName);
-	while (true) {
+	while (!ifs.eof()) {
 		getline(ifs, buf, '\n');
 		if (buf.size() == 0)
 			break;
@@ -96,9 +96,9 @@ void DatabaseController::setAttribute(DatabaseAttribute attr) {
  * @date  2021-08-03
  */
 void DatabaseController::setBlock(UuidType id, DatabaseBlock block) {
-	string dataName = to_string(id) + string(".gw-data");
+	string dataName = to_string(id) + string(".gwdb-data");
 	ofstream ofs(dataName);
-	for (string buf : blocks.data)
+	for (string buf : block.data)
 		ofs << buf << endl;
 	ofs.close();
 }

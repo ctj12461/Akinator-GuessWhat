@@ -24,7 +24,7 @@ struct DatabaseBlock {
 	vector<string> data;
 
 	DatabaseBlock() : uuid(0) {}
-	DatabaseBlock(UuidType id, const vector<string> v) : uuid(id), data(v) {}
+	DatabaseBlock(UuidType id, const vector<string> &v) : uuid(id), data(v) {}
 	~DatabaseBlock() {}
 
 	void setUuid(int id) {
