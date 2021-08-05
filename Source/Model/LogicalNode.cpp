@@ -13,7 +13,7 @@ namespace Model {
  * @date  2021-08-01
  */
 LogicalNode::LogicalNode(NodeEnum n, string t) noexcept 
-    : uuid(LogicalNode::null) {
+    : uuid(LogicalNode::null), previous(LogicalNode::null) {
 	type = n;
 	text = t;
 }

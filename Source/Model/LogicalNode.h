@@ -13,6 +13,8 @@ class LogicalNode {
 public:
 	static constexpr UuidType null = 0;
 	
+	virtual ~LogicalNode() noexcept;
+	
 	NodeEnum getType() const noexcept;
 	string getText() const noexcept;
 	UuidType getUuid() const noexcept;
@@ -29,7 +31,6 @@ protected:
 	UuidType previous;
 
 	LogicalNode(NodeEnum n, string t = "") noexcept;
-	~LogicalNode() noexcept;
 };
 
 }
