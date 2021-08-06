@@ -14,8 +14,8 @@ namespace Model {
  */
 LogicalNode::LogicalNode(NodeEnum n, string t) noexcept 
     : uuid(LogicalNode::null), previous(LogicalNode::null) {
-	type = n;
-	text = t;
+    type = n;
+    text = t;
 }
 
 /**
@@ -23,16 +23,16 @@ LogicalNode::LogicalNode(NodeEnum n, string t) noexcept
  * @date  2021-08-01
  */
 LogicalNode::~LogicalNode() noexcept {
-	
+    
 }
 
 /**
- * 返回当前结点的类型 (Quer	y/Answer)
+ * 返回当前结点的类型 (Quer  y/Answer)
  * @return 当前结点的类型
  * @date   2021-08-01
  */
 NodeEnum LogicalNode::getType() const noexcept {
-	return type;
+    return type;
 }
 
 /**
@@ -41,7 +41,7 @@ NodeEnum LogicalNode::getType() const noexcept {
  * @date   2021-08-01
  */
 string LogicalNode::getText() const noexcept {
-	return text;
+    return text;
 }
 
 /**
@@ -50,7 +50,7 @@ string LogicalNode::getText() const noexcept {
  * @date   2021-08-01
  */
 UuidType LogicalNode::getUuid() const noexcept {
-	return uuid;
+    return uuid;
 }
 
 /**
@@ -59,7 +59,7 @@ UuidType LogicalNode::getUuid() const noexcept {
  * @date   2021-08-01
  */
 bool LogicalNode::isEnd() const noexcept {
-	return type == NodeEnum::Answer;
+    return type == NodeEnum::Answer;
 }
 
 /**
@@ -77,7 +77,7 @@ UuidType LogicalNode::getPrevious() const noexcept {
  * @date  2021-08-01
  */
 void LogicalNode::setText(string t) noexcept {
-	text = t;
+    text = t;
 }
 
 /**

@@ -11,26 +11,26 @@ namespace Model {
 
 class LogicalNode {
 public:
-	static constexpr UuidType null = 0;
-	
-	virtual ~LogicalNode() noexcept;
-	
-	NodeEnum getType() const noexcept;
-	string getText() const noexcept;
-	UuidType getUuid() const noexcept;
-	UuidType getPrevious() const noexcept;
-	bool isEnd() const noexcept;
-	
-	void setText(string t) noexcept;
-	void setUuid(UuidType id) noexcept;
-	void setPrevious(UuidType id) noexcept;
+    static constexpr UuidType null = 0;
+    
+    virtual ~LogicalNode() noexcept;
+    
+    NodeEnum getType() const noexcept;
+    string getText() const noexcept;
+    UuidType getUuid() const noexcept;
+    UuidType getPrevious() const noexcept;
+    bool isEnd() const noexcept;
+    
+    void setText(string t) noexcept;
+    void setUuid(UuidType id) noexcept;
+    void setPrevious(UuidType id) noexcept;
 protected:
-	NodeEnum type;
-	string text;
-	UuidType uuid;
-	UuidType previous;
+    NodeEnum type;
+    string text;
+    UuidType uuid;
+    UuidType previous;
 
-	LogicalNode(NodeEnum n, string t = "") noexcept;
+    LogicalNode(NodeEnum n, string t = "") noexcept;
 };
 
 }

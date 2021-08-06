@@ -11,8 +11,8 @@ namespace Model {
  * @date  2021-08-03
  */
 DatabaseController::DatabaseController(string name) {
-	if (name.size() != 0)
-		open(name);
+    if (name.size() != 0)
+        open(name);
 }
 
 /**
@@ -20,7 +20,7 @@ DatabaseController::DatabaseController(string name) {
  * @date  2021-08-03
  */
 DatabaseController::~DatabaseController() {
-	close();
+    close();
 }
 
 /**
@@ -29,12 +29,12 @@ DatabaseController::~DatabaseController() {
  * @date  2021-08-03
  */
 void DatabaseController::open(string name) {
-	string headerName = getFileName(name, name, "gwdb-header");
-	ifstream ifs(headerName);
-	ifs >> attribute.name;
-	ifs >> attribute.total;
-	ifs >> attribute.blockTotal;
-	ifs.close();
+    string headerName = getFileName(name, name, "gwdb-header");
+    ifstream ifs(headerName);
+    ifs >> attribute.name;
+    ifs >> attribute.total;
+    ifs >> attribute.blockTotal;
+    ifs.close();
 }
 
 /**
@@ -42,12 +42,12 @@ void DatabaseController::open(string name) {
  * @date  2021-08-03
  */
 void DatabaseController::close() {
-	string headerName = getFileName(attribute.name, attribute.name, "gwdb-header");
-	ofstream ofs(headerName);
-	ofs << attribute.name << endl;
-	ofs << attribute.total << endl;
-	ofs << attribute.blockTotal << endl;
-	ofs.close();
+    string headerName = getFileName(attribute.name, attribute.name, "gwdb-header");
+    ofstream ofs(headerName);
+    ofs << attribute.name << endl;
+    ofs << attribute.total << endl;
+    ofs << attribute.blockTotal << endl;
+    ofs.close();
 }
 
 /**
@@ -56,7 +56,7 @@ void DatabaseController::close() {
  * @date   2021-08-03
  */
 DatabaseAttribute DatabaseController::getAttribute() const {
-	return attribute;
+    return attribute;
 }
 
 /**
@@ -66,19 +66,19 @@ DatabaseAttribute DatabaseController::getAttribute() const {
  * @date   2021-08-03
  */
 DatabaseBlock DatabaseController::getBlock(UuidType id) const {
-	string dataName = getFileName(attribute.name, to_string(id), "gwdb-data");
-	string buf;
-	DatabaseBlock block;
-	ifstream ifs(dataName);
-	while (!ifs.eof()) {
-		getline(ifs, buf, '\n');
-		if (buf.size() == 0)
-			break;
-		block.data.push_back(buf);
-	}
-	block.setUuid(id);
-	ifs.close();
-	return block;
+    string dataName = getFileName(attribute.name, to_string(id), "gwdb-data");
+    string buf;
+    DatabaseBlock block;
+    ifstream ifs(dataName);
+    while (!ifs.eof()) {
+        getline(ifs, buf, '\n');
+        if (buf.size() == 0)
+            break;
+        block.data.push_back(buf);
+    }
+    block.setUuid(id);
+    ifs.close();
+    return block;
 }
 
 /**
@@ -87,7 +87,7 @@ DatabaseBlock DatabaseController::getBlock(UuidType id) const {
  * @date  2021-08-03
  */
 void DatabaseController::setAttribute(DatabaseAttribute attr) {
-	attribute = attr;
+    attribute = attr;
 }
 
 /**
@@ -97,11 +97,11 @@ void DatabaseController::setAttribute(DatabaseAttribute attr) {
  * @date  2021-08-03
  */
 void DatabaseController::setBlock(UuidType id, DatabaseBlock block) {
-	string dataName = getFileName(attribute.name, to_string(id), "gwdb-data");
-	ofstream ofs(dataName);
-	for (string buf : block.data)
-		ofs << buf << endl;
-	ofs.close();
+    string dataName = getFileName(attribute.name, to_string(id), "gwdb-data");
+    ofstream ofs(dataName);
+    for (string buf : block.data)
+        ofs << buf << endl;
+    ofs.close();
 }
 
 /**
@@ -113,7 +113,7 @@ void DatabaseController::setBlock(UuidType id, DatabaseBlock block) {
  * @date   2021-08-06
  */
 string DatabaseController::getFileName(string dir, string name, string prefix) const {
-	return dir + string("/") + name + string(".") + prefix;
+    return dir + string("/") + name + string(".") + prefix;
 }
 
 }

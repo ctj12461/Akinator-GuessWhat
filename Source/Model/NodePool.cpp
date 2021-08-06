@@ -20,8 +20,8 @@ namespace Model {
  * @date   2021-08-02
  */
 DataBlock::DataBlock() : size(0) {
-	for (int i = 0; i < DataBlock::BlockSize; ++i)
-		nodes[i] = nullptr;
+    for (int i = 0; i < DataBlock::BlockSize; ++i)
+        nodes[i] = nullptr;
 }
 
 /**
@@ -29,9 +29,9 @@ DataBlock::DataBlock() : size(0) {
  * @date   2021-08-02
  */
 DataBlock::~DataBlock() {
-	for (int i = 0; i < DataBlock::BlockSize; ++i)
-		if (nodes[i] != nullptr)
-			delete nodes[i];
+    for (int i = 0; i < DataBlock::BlockSize; ++i)
+        if (nodes[i] != nullptr)
+            delete nodes[i];
 }
 
 /**
@@ -40,31 +40,31 @@ DataBlock::~DataBlock() {
  * @date   2021-08-02
  */
 vector<string> DataBlock::serialize() const {
-	string space(" ");
-	vector<string> res;
+    string space(" ");
+    vector<string> res;
 
-	for (UuidType i = 0; i < size; ++i) {
-		LogicalNode *p = nodes[i];
-		if (p == nullptr)
-			continue;
+    for (UuidType i = 0; i < size; ++i) {
+        LogicalNode *p = nodes[i];
+        if (p == nullptr)
+            continue;
 
-		string s("");
-		s += to_string(p->getUuid()) + space;
-		s += to_string(p->getPrevious()) + space;
-		/** 判断是 Query 还是 Answer 结点 */
-		if (p->getType() == NodeEnum::Query) {
-			QueryNode *qp = dynamic_cast<QueryNode *>(p);
-			s += string("Query") + space;
-			s += to_string(qp->getBranch(BranchEnum::Yes)) + space;
-			s += to_string(qp->getBranch(BranchEnum::No)) + space;
-		} else {
-			s += string("Answer") + space;
-		}
-		s += p->getText();
+        string s("");
+        s += to_string(p->getUuid()) + space;
+        s += to_string(p->getPrevious()) + space;
+        /** 判断是 Query 还是 Answer 结点 */
+        if (p->getType() == NodeEnum::Query) {
+            QueryNode *qp = dynamic_cast<QueryNode *>(p);
+            s += string("Query") + space;
+            s += to_string(qp->getBranch(BranchEnum::Yes)) + space;
+            s += to_string(qp->getBranch(BranchEnum::No)) + space;
+        } else {
+            s += string("Answer") + space;
+        }
+        s += p->getText();
 
-		res.push_back(s);
-	}
-	return res;
+        res.push_back(s);
+    }
+    return res;
 }
 
 /**
@@ -73,35 +73,35 @@ vector<string> DataBlock::serialize() const {
  * @date  2021-08-02
  */
 void DataBlock::deserialize(const vector<string> &data) {
-	istringstream iss;
-	string now, text;
-	UuidType uuid = 0, prevUuid = 0, yesUuid = 0, noUuid = 0;
-	LogicalNode *p = nullptr;
+    istringstream iss;
+    string now, text;
+    UuidType uuid = 0, prevUuid = 0, yesUuid = 0, noUuid = 0;
+    LogicalNode *p = nullptr;
 
-	for (string s : data) {
-		iss.clear();
-		iss.str(s);
-		iss >> uuid >> prevUuid >> now;
-		/** 判断是 Query 还是 Answer 结点 */
-		if (now[0] == 'Q') {
-			iss >> yesUuid >> noUuid;
-			/** 去掉空格等字符 */
-			while (isalnum(iss.peek()) == false)
-				iss.get();
-			getline(iss, text);
-			QueryNode *qp = newQueryNode(text, uuid);
-			qp->setPrevious(prevUuid);
-			qp->setBranch(BranchEnum::Yes, yesUuid);
-			qp->setBranch(BranchEnum::No, noUuid);
-		} else {
-			/** 去掉空格等字符 */
-			while (isalnum(iss.peek()) == false)
-				iss.get();
-			getline(iss, text);
-			AnswerNode *ap = newAnswerNode(text, uuid);
-			ap->setPrevious(prevUuid);
-		}
-	}
+    for (string s : data) {
+        iss.clear();
+        iss.str(s);
+        iss >> uuid >> prevUuid >> now;
+        /** 判断是 Query 还是 Answer 结点 */
+        if (now[0] == 'Q') {
+            iss >> yesUuid >> noUuid;
+            /** 去掉空格等字符 */
+            while (isalnum(iss.peek()) == false)
+                iss.get();
+            getline(iss, text);
+            QueryNode *qp = newQueryNode(text, uuid);
+            qp->setPrevious(prevUuid);
+            qp->setBranch(BranchEnum::Yes, yesUuid);
+            qp->setBranch(BranchEnum::No, noUuid);
+        } else {
+            /** 去掉空格等字符 */
+            while (isalnum(iss.peek()) == false)
+                iss.get();
+            getline(iss, text);
+            AnswerNode *ap = newAnswerNode(text, uuid);
+            ap->setPrevious(prevUuid);
+        }
+    }
 }
 
 /**
@@ -113,10 +113,10 @@ void DataBlock::deserialize(const vector<string> &data) {
  * @date   2021-08-02
  */
 QueryNode *DataBlock::newQueryNode(string text, UuidType id) {
-	QueryNode *qp = new QueryNode(text);
-	qp->setUuid(id);
-	nodes[size++] = static_cast<LogicalNode *>(qp);
-	return qp;
+    QueryNode *qp = new QueryNode(text);
+    qp->setUuid(id);
+    nodes[size++] = static_cast<LogicalNode *>(qp);
+    return qp;
 }
 
 /**
@@ -128,10 +128,10 @@ QueryNode *DataBlock::newQueryNode(string text, UuidType id) {
  * @date   2021-08-02
  */
 AnswerNode *DataBlock::newAnswerNode(string text, UuidType id) {
-	AnswerNode *ap = new AnswerNode(text);
-	ap->setUuid(id);
-	nodes[size++] = static_cast<LogicalNode *>(ap);
-	return ap;
+    AnswerNode *ap = new AnswerNode(text);
+    ap->setUuid(id);
+    nodes[size++] = static_cast<LogicalNode *>(ap);
+    return ap;
 }
 
 /**
@@ -140,7 +140,7 @@ AnswerNode *DataBlock::newAnswerNode(string text, UuidType id) {
  * @date   2021-08-05
  */
 UuidType DataBlock::getSize() const {
-	return size;
+    return size;
 }
 
 /**
@@ -150,7 +150,7 @@ UuidType DataBlock::getSize() const {
  * @date   2021-08-05
  */
 LogicalNode *DataBlock::get(UuidType id) const {
-	return nodes[id];
+    return nodes[id];
 }
 
 /**
@@ -158,11 +158,11 @@ LogicalNode *DataBlock::get(UuidType id) const {
  * @date   2021-08-02
  */
 NodePool::NodePool(DatabaseController *p) : database(p) {
-	if (p == nullptr)
-		return;
-	DatabaseAttribute attr = database->getAttribute();
-	total = attr.total;
-	blockTotal = attr.blockTotal;
+    if (p == nullptr)
+        return;
+    DatabaseAttribute attr = database->getAttribute();
+    total = attr.total;
+    blockTotal = attr.blockTotal;
 }
 
 /**
@@ -170,13 +170,13 @@ NodePool::NodePool(DatabaseController *p) : database(p) {
  * @date   2021-08-02
  */
 NodePool::~NodePool() {
-	save();
-	for (auto p : blocks) {
-		if (p.second == nullptr)
-			continue;
-		delete p.second;
-	}
-	blocks.clear();
+    save();
+    for (auto p : blocks) {
+        if (p.second == nullptr)
+            continue;
+        delete p.second;
+    }
+    blocks.clear();
 }
 
 /**
@@ -185,10 +185,10 @@ NodePool::~NodePool() {
  * @date  2021-08-02
  */
 void NodePool::setDatabaseController(DatabaseController *p) {
-	database = p;
-	DatabaseAttribute attr = database->getAttribute();
-	total = attr.total;
-	blockTotal = attr.blockTotal;
+    database = p;
+    DatabaseAttribute attr = database->getAttribute();
+    total = attr.total;
+    blockTotal = attr.blockTotal;
 }
 
 /**
@@ -198,18 +198,18 @@ void NodePool::setDatabaseController(DatabaseController *p) {
  * @date   2021-08-02
  */
 QueryNode *NodePool::newQueryNode(string text) {
-	int uuid = total + 1;
-	int blockid = getBlockId(uuid);
-	/** 检查是否需要创建新的块 */
-	if (blockid > blockTotal)
-		newDataBlock();
-	if (blocks.find(blockid) == blocks.end() || blocks[blockid] == nullptr)
-		return nullptr;
-	/** 新建结点 */
-	QueryNode *qp = blocks[blockid]->newQueryNode(text, uuid);
-	if (qp != nullptr)
-		++total;
-	return qp;
+    int uuid = total + 1;
+    int blockid = getBlockId(uuid);
+    /** 检查是否需要创建新的块 */
+    if (blockid > blockTotal)
+        newDataBlock();
+    if (blocks.find(blockid) == blocks.end() || blocks[blockid] == nullptr)
+        return nullptr;
+    /** 新建结点 */
+    QueryNode *qp = blocks[blockid]->newQueryNode(text, uuid);
+    if (qp != nullptr)
+        ++total;
+    return qp;
 }
 
 /**
@@ -219,18 +219,18 @@ QueryNode *NodePool::newQueryNode(string text) {
  * @date   2021-08-02
  */
 AnswerNode *NodePool::newAnswerNode(string text) {
-	int uuid = total + 1;
-	int blockid = getBlockId(uuid);
-	/** 检查是否需要创建新的块 */
-	if (blockid > blockTotal)
-		newDataBlock();
-	if (exist(blockid) == false)
-		return nullptr;
-	/** 新建结点 */
-	AnswerNode *ap = blocks[blockid]->newAnswerNode(text, uuid);
-	if (ap != nullptr)
-		++total;
-	return ap;
+    int uuid = total + 1;
+    int blockid = getBlockId(uuid);
+    /** 检查是否需要创建新的块 */
+    if (blockid > blockTotal)
+        newDataBlock();
+    if (exist(blockid) == false)
+        return nullptr;
+    /** 新建结点 */
+    AnswerNode *ap = blocks[blockid]->newAnswerNode(text, uuid);
+    if (ap != nullptr)
+        ++total;
+    return ap;
 }
 
 /**
@@ -239,7 +239,7 @@ AnswerNode *NodePool::newAnswerNode(string text) {
  * @date 2021-08-02
  */
 DatabaseController *NodePool::getDatabaseController() const noexcept {
-	return database;
+    return database;
 }
 
 /**
@@ -250,19 +250,19 @@ DatabaseController *NodePool::getDatabaseController() const noexcept {
  * @date  2021-08-02
  */
 void NodePool::load(function<void(LogicalNode *)> f, UuidType id) {
-	int blockid = getBlockId(id);
-	if (blockid > blockTotal)
-		return;
-	if (exist(blockid) == true)
-		return;
-	DatabaseBlock block = database->getBlock(blockid);
-	DataBlock *p = new DataBlock;
-	if (p == nullptr)
-		return;
-	blocks[blockid] = p;
-	p->deserialize(block.data);
-	for (UuidType i = 0; i < p->getSize(); ++i)
-		f(p->get(i));
+    int blockid = getBlockId(id);
+    if (blockid > blockTotal)
+        return;
+    if (exist(blockid) == true)
+        return;
+    DatabaseBlock block = database->getBlock(blockid);
+    DataBlock *p = new DataBlock;
+    if (p == nullptr)
+        return;
+    blocks[blockid] = p;
+    p->deserialize(block.data);
+    for (UuidType i = 0; i < p->getSize(); ++i)
+        f(p->get(i));
 }
 
 /**
@@ -270,16 +270,16 @@ void NodePool::load(function<void(LogicalNode *)> f, UuidType id) {
  * @date 2021-08-06
  */
 void NodePool::save() {
-	for (auto p : blocks) {
-		if (p.second == nullptr)
-			continue;
-		DatabaseBlock block(p.first, p.second->serialize());
-		database->setBlock(p.first, block);
-	}
-	DatabaseAttribute attr = database->getAttribute();
-	attr.total = total;
-	attr.blockTotal = blockTotal;
-	database->setAttribute(attr);
+    for (auto p : blocks) {
+        if (p.second == nullptr)
+            continue;
+        DatabaseBlock block(p.first, p.second->serialize());
+        database->setBlock(p.first, block);
+    }
+    DatabaseAttribute attr = database->getAttribute();
+    attr.total = total;
+    attr.blockTotal = blockTotal;
+    database->setAttribute(attr);
 }
 
 /**
@@ -288,7 +288,7 @@ void NodePool::save() {
  * @date   2021-08-06
  */
 UuidType NodePool::size() const noexcept {
-	return total;
+    return total;
 }
 
 /**
@@ -298,7 +298,7 @@ UuidType NodePool::size() const noexcept {
  * @date   2021-08-02
  */
 bool NodePool::exist(UuidType id) noexcept {
-	return blocks.find(id) != blocks.end() && (blocks[id]) != nullptr;
+    return blocks.find(id) != blocks.end() && (blocks[id]) != nullptr;
 }
 
 /**
@@ -308,7 +308,7 @@ bool NodePool::exist(UuidType id) noexcept {
  * @date   2021-08-02
  */
 UuidType NodePool::getBlockId(UuidType uuid) const noexcept {
-	return static_cast<UuidType>(ceil(1.0 * uuid / DataBlock::BlockSize));
+    return static_cast<UuidType>(ceil(1.0 * uuid / DataBlock::BlockSize));
 }
 
 /**
@@ -317,10 +317,10 @@ UuidType NodePool::getBlockId(UuidType uuid) const noexcept {
  * @date   2021-08-02
  */
 UuidType NodePool::newDataBlock() {
-	++blockTotal;
-	DataBlock *p = new DataBlock;
-	blocks[blockTotal] = p;
-	return blockTotal;
+    ++blockTotal;
+    DataBlock *p = new DataBlock;
+    blocks[blockTotal] = p;
+    return blockTotal;
 }
 
 }

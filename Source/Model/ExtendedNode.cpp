@@ -13,7 +13,7 @@ namespace Model {
  * @date  2021-08-01
  */
 QueryNode::QueryNode(string t) : LogicalNode(NodeEnum::Query, t) {
-	branch[0] = branch[1] = 0;
+    branch[0] = branch[1] = 0;
 }
 
 /**
@@ -31,7 +31,7 @@ QueryNode::~QueryNode() noexcept {
  * @date   2021-08-01
  */
 UuidType QueryNode::getBranch(BranchEnum b) const noexcept {
-	return branch[static_cast<int>(b)];
+    return branch[static_cast<int>(b)];
 }
 
 /**
@@ -41,7 +41,7 @@ UuidType QueryNode::getBranch(BranchEnum b) const noexcept {
  * @date  2021-08-01
  */
 void QueryNode::setBranch(BranchEnum b, UuidType id) noexcept {
-	branch[static_cast<int>(b)] = id;
+    branch[static_cast<int>(b)] = id;
 }
 
 /**

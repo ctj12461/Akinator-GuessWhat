@@ -36,9 +36,9 @@ Network::~Network() noexcept {
  * @date   2021-08-01
  */
 string Network::getText() {
-	if (isVaild() == false)
-		return string("");
-	return deref(current)->getText();
+    if (isVaild() == false)
+        return string("");
+    return deref(current)->getText();
 }
 
 /**
@@ -47,9 +47,9 @@ string Network::getText() {
  * @date   2021-08-01
  */
 bool Network::isVaild() {
-	if (current == LogicalNode::null)
-		return false;
-	return deref(current) != nullptr;
+    if (current == LogicalNode::null)
+        return false;
+    return deref(current) != nullptr;
 }
 
 /**
@@ -58,9 +58,9 @@ bool Network::isVaild() {
  * @date   2021-08-01
  */
 bool Network::isEnd() {
-	if (isVaild() == false)
-		return true;
-	return deref(current)->isEnd();
+    if (isVaild() == false)
+        return true;
+    return deref(current)->isEnd();
 }
 
 /**
@@ -69,7 +69,7 @@ bool Network::isEnd() {
  * @date   2021-08-01
  */
 UuidType Network::getCurrentUuid() const {
-	return current;
+    return current;
 }
 
 /**
@@ -80,7 +80,7 @@ UuidType Network::getCurrentUuid() const {
 UuidType Network::size() const {
     if (pool == nullptr)
         return 0;
-	return pool->size();
+    return pool->size();
 }
 
 /**
@@ -89,7 +89,7 @@ UuidType Network::size() const {
  * @date  2021-08-01
  */
 void Network::setCurrentUuid(UuidType id) {
-	current = id;
+    current = id;
 }
 
 /**
@@ -98,7 +98,7 @@ void Network::setCurrentUuid(UuidType id) {
  * @date  2021-08-01
  */
 void Network::setNodePool(NodePool *p) {
-	pool = p;
+    pool = p;
     if (p == nullptr)
         return;
     nodes.clear();
@@ -111,11 +111,11 @@ void Network::setNodePool(NodePool *p) {
  * @date  2021-08-01
  */
 void Network::goNext(BranchEnum b) {
-	if (isVaild() == false)
-		return;
-	if (deref(current)->getType() == NodeEnum::Answer)
-		return;
-	current = dynamic_cast<QueryNode *>(deref(current))->getBranch(b);
+    if (isVaild() == false)
+        return;
+    if (deref(current)->getType() == NodeEnum::Answer)
+        return;
+    current = dynamic_cast<QueryNode *>(deref(current))->getBranch(b);
 }
 
 /**
@@ -136,7 +136,7 @@ void Network::goPrevious() {
  * @date 2021-08-01
  */
 void Network::reset() {
-	current = origin;
+    current = origin;
 }
 
 /**
@@ -145,9 +145,9 @@ void Network::reset() {
  * @date  2021-08-01
  */
 void Network::addNode(LogicalNode *p) {
-	if (p == nullptr)
-		return;
-	nodes[p->getUuid()] = p;
+    if (p == nullptr)
+        return;
+    nodes[p->getUuid()] = p;
 }
 
 /**
@@ -159,22 +159,22 @@ void Network::addNode(LogicalNode *p) {
  * @date  2021-08-01
  */
 void Network::extend(string query, string answer, BranchEnum which) {
-	if (pool == nullptr)
-		return;
-	AnswerNode *p = dynamic_cast<AnswerNode *>(deref(current));
-	if (p == nullptr)
-		return;
-	/** 获取新结点 */
-	QueryNode *qp = pool->newQueryNode(query);
-	AnswerNode *ap = pool->newAnswerNode(answer);
-	addNode(qp);
-	addNode(ap);
-	/** 设置 qp 前驱后继，p & ap 的前驱 */
-	qp->setPrevious(p->getPrevious());
-	p->setPrevious(qp->getUuid());
-	ap->setPrevious(qp->getUuid());
-	qp->setBranch(which, ap->getUuid());
-	qp->setBranch(other(which), p->getUuid());
+    if (pool == nullptr)
+        return;
+    AnswerNode *p = dynamic_cast<AnswerNode *>(deref(current));
+    if (p == nullptr)
+        return;
+    /** 获取新结点 */
+    QueryNode *qp = pool->newQueryNode(query);
+    AnswerNode *ap = pool->newAnswerNode(answer);
+    addNode(qp);
+    addNode(ap);
+    /** 设置 qp 前驱后继，p & ap 的前驱 */
+    qp->setPrevious(p->getPrevious());
+    p->setPrevious(qp->getUuid());
+    ap->setPrevious(qp->getUuid());
+    qp->setBranch(which, ap->getUuid());
+    qp->setBranch(other(which), p->getUuid());
     /** 设置 qp 前驱的后继 */
     if (qp->getPrevious() == LogicalNode::null)
         return;
@@ -192,10 +192,10 @@ void Network::extend(string query, string answer, BranchEnum which) {
  * @date   2021-08-01
  */
 BranchEnum Network::other(BranchEnum b) const noexcept {
-	if (b == BranchEnum::Yes)
-		return BranchEnum::No;
-	else
-		return BranchEnum::Yes;
+    if (b == BranchEnum::Yes)
+        return BranchEnum::No;
+    else
+        return BranchEnum::Yes;
 }
 
 /**
@@ -207,13 +207,13 @@ BranchEnum Network::other(BranchEnum b) const noexcept {
  * @date   2021-08-01
  */
 UuidType Network::next(UuidType now, BranchEnum b) {
-	if (now == LogicalNode::null)
-		return LogicalNode::null;
-	if (deref(now) == nullptr)
-		return LogicalNode::null;
-	if (deref(now)->getType() == NodeEnum::Answer)
-		return LogicalNode::null;
-	return dynamic_cast<QueryNode *>(deref(now))->getBranch(b);
+    if (now == LogicalNode::null)
+        return LogicalNode::null;
+    if (deref(now) == nullptr)
+        return LogicalNode::null;
+    if (deref(now)->getType() == NodeEnum::Answer)
+        return LogicalNode::null;
+    return dynamic_cast<QueryNode *>(deref(now))->getBranch(b);
 }
 
 /**
@@ -223,14 +223,14 @@ UuidType Network::next(UuidType now, BranchEnum b) {
  * @date   2021-08-01
  */
 LogicalNode *Network::deref(UuidType id) {
-	if (id == LogicalNode::null)
-		return nullptr;
-	if (exist(id) == false)
-		load(id);
-	/** 从文件中加载后再次检查是否存在 */
-	if (exist(id) == false)
-		return nullptr;
-	return nodes[id];
+    if (id == LogicalNode::null)
+        return nullptr;
+    if (exist(id) == false)
+        load(id);
+    /** 从文件中加载后再次检查是否存在 */
+    if (exist(id) == false)
+        return nullptr;
+    return nodes[id];
 }
 
 /**
@@ -240,7 +240,7 @@ LogicalNode *Network::deref(UuidType id) {
  * @date   2021-08-02
  */
 bool Network::exist(UuidType id) const {
-	return nodes.find(id) != nodes.end();
+    return nodes.find(id) != nodes.end();
 }
 
 /**
@@ -253,7 +253,7 @@ bool Network::exist(UuidType id) const {
 void Network::load(UuidType id) {
     using std::placeholders::_1;
     /** 添加回调方法 */
-	pool->load(bind(&Network::addNode, this, _1), id);
+    pool->load(bind(&Network::addNode, this, _1), id);
 }
 
 }

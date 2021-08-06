@@ -23,11 +23,11 @@
 using UuidType = unsigned long long;
 
 enum class NodeEnum {
-	Query, Answer
+    Query, Answer
 };
 
 enum class BranchEnum {
-	No, Yes
+    No, Yes
 };
 
 #endif
