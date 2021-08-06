@@ -11,28 +11,29 @@ using namespace std;
 namespace Model {
 
 class NodePool;
+class LogicalNode;
 
 class Network {
 public:
-	Network(int tot, NodePool *p = nullptr);
+	Network(NodePool *p = nullptr);
 	~Network() noexcept;
 	
-	string getText() const;
-	bool isVaild() const;
-	bool isEnd() const;
+	string getText();
+	bool isVaild();
+	bool isEnd();
 	UuidType getCurrentUuid() const;
 	UuidType size() const;
 
 	void setCurrentUuid(UuidType id);
 	void setNodePool(NodePool *p);
 	void goNext(BranchEnum b);
+	void goPrevious();
 	void reset();
 	void addNode(LogicalNode *p);
 	void extend(string query, string answer, BranchEnum which);
 private:
 	static constexpr UuidType origin = 1;
 	UuidType current;
-	UuidType total;
 	unordered_map<UuidType, LogicalNode *> nodes;
 	NodePool *pool;
 

@@ -10,7 +10,6 @@
 #include <string>
 #include <unordered_map>
 #include <functional>
-#include <iostream>
 
 using namespace std;
 
@@ -266,6 +265,10 @@ void NodePool::load(function<void(LogicalNode *)> f, UuidType id) {
 		f(p->get(i));
 }
 
+/**
+ * 将结点信息写入数据库
+ * @date 2021-08-06
+ */
 void NodePool::save() {
 	for (auto p : blocks) {
 		if (p.second == nullptr)
@@ -277,6 +280,15 @@ void NodePool::save() {
 	attr.total = total;
 	attr.blockTotal = blockTotal;
 	database->setAttribute(attr);
+}
+
+/**
+ * 返回总结点数
+ * @return 结点数
+ * @date   2021-08-06
+ */
+UuidType NodePool::size() const noexcept {
+	return total;
 }
 
 /**

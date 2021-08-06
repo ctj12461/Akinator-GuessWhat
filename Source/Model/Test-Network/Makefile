@@ -1,7 +1,9 @@
-Test : Test.o NodePool.o Database.o LogicalNode.o ExtendedNode.o
-	g++ -g -o Test Test.o NodePool.o Database.o LogicalNode.o ExtendedNode.o
+Test : Test.o Network.o NodePool.o Database.o LogicalNode.o ExtendedNode.o
+	g++ -g -o Test Network.o Test.o NodePool.o Database.o LogicalNode.o ExtendedNode.o
 Test.o : Test.cpp ../Definition.h ../NodePool.h ../Database.h ../LogicalNode.h ../ExtendedNode.h
 	g++ -g -c Test.cpp
+Network.o : ../NodePool.cpp ../Definition.h ../Network.h ../NodePool.h ../LogicalNode.h ../ExtendedNode.h
+	g++ -g -c ../Network.cpp
 NodePool.o : ../NodePool.cpp ../Definition.h ../NodePool.h ../Database.h ../LogicalNode.h ../ExtendedNode.h
 	g++ -g -c ../NodePool.cpp
 Database.o : ../Database.cpp ../Database.h ../Definition.h
@@ -13,8 +15,8 @@ ExtendedNode.o : ../ExtendedNode.cpp ../ExtendedNode.h
 
 .PHONY : clean
 clean :
-	-rm Test Test.o NodePool.o Database.o LogicalNode.o ExtendedNode.o
-	-rm TestDatabase/TestDatabase.gwdb-header TestDatabase/1.gwdb-data TestDatabase/2.gwdb-data
+	-rm Test Test.o Network.o NodePool.o Database.o LogicalNode.o ExtendedNode.o
+	-rm TestDatabase/TestDatabase.gwdb-header TestDatabase/1.gwdb-data
 	echo -e "TestDatabase\n3\n1\n" > TestDatabase/TestDatabase.gwdb-header
 	echo "1 0 Query 2 3 1 - QueryNode" > TestDatabase/1.gwdb-data
 	echo "2 1 Answer 2 - AnswerNode (Yes)" >> TestDatabase/1.gwdb-data

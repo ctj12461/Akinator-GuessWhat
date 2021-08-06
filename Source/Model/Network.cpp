@@ -17,7 +17,7 @@ namespace Model {
  * @param p          结点管理器的弱指针
  * @date  2021-08-01
  */
-Network::Network(int tot, NodePool *p = nullptr) : pool(p), current(origin), total(tot) {
+Network::Network(NodePool *p) : pool(p), current(origin) {
 
 }
 
@@ -25,7 +25,7 @@ Network::Network(int tot, NodePool *p = nullptr) : pool(p), current(origin), tot
  * 析构函数
  * @date  2021-08-01
  */
-Network::~Ndetwork() noexcept {
+Network::~Network() noexcept {
 
 }
 
@@ -35,7 +35,7 @@ Network::~Ndetwork() noexcept {
  * @return 文本
  * @date   2021-08-01
  */
-string Network::getText() const {
+string Network::getText() {
 	if (isVaild() == false)
 		return string("");
 	return deref(current)->getText();
@@ -46,7 +46,7 @@ string Network::getText() const {
  * @return 判断结果
  * @date   2021-08-01
  */
-bool Network::isVaild() const {
+bool Network::isVaild() {
 	if (current == LogicalNode::null)
 		return false;
 	return deref(current) != nullptr;
@@ -57,7 +57,7 @@ bool Network::isVaild() const {
  * @return 判断结果
  * @date   2021-08-01
  */
-bool Network::isEnd() const {
+bool Network::isEnd() {
 	if (isVaild() == false)
 		return true;
 	return deref(current)->isEnd();
@@ -78,7 +78,9 @@ UuidType Network::getCurrentUuid() const {
  * @date   2021-08-01
  */
 UuidType Network::size() const {
-	return total;
+    if (pool == nullptr)
+        return 0;
+	return pool->size();
 }
 
 /**
@@ -97,6 +99,10 @@ void Network::setCurrentUuid(UuidType id) {
  */
 void Network::setNodePool(NodePool *p) {
 	pool = p;
+    if (p == nullptr)
+        return;
+    nodes.clear();
+    current = Network::origin;
 }
 
 /**
@@ -107,9 +113,22 @@ void Network::setNodePool(NodePool *p) {
 void Network::goNext(BranchEnum b) {
 	if (isVaild() == false)
 		return;
-	if (deref(current)->getType == NodeEnum::Answer)
+	if (deref(current)->getType() == NodeEnum::Answer)
 		return;
 	current = dynamic_cast<QueryNode *>(deref(current))->getBranch(b);
+}
+
+/**
+ * 移动到前驱结点
+ * @param b          分支 (Yes/No)
+ * @date  2021-08-06
+ */
+void Network::goPrevious() {
+    if (isVaild() == false)
+        return;
+    if (deref(current)->getPrevious() == LogicalNode::null)
+        return;
+    current = deref(current)->getPrevious();
 }
 
 /**
@@ -142,7 +161,7 @@ void Network::addNode(LogicalNode *p) {
 void Network::extend(string query, string answer, BranchEnum which) {
 	if (pool == nullptr)
 		return;
-	AnswerNode *p = deref(current);
+	AnswerNode *p = dynamic_cast<AnswerNode *>(deref(current));
 	if (p == nullptr)
 		return;
 	/** 获取新结点 */
@@ -150,7 +169,6 @@ void Network::extend(string query, string answer, BranchEnum which) {
 	AnswerNode *ap = pool->newAnswerNode(answer);
 	addNode(qp);
 	addNode(ap);
-	total += 2;
 	/** 设置 qp 前驱后继，p & ap 的前驱 */
 	qp->setPrevious(p->getPrevious());
 	p->setPrevious(qp->getUuid());
@@ -194,7 +212,7 @@ UuidType Network::next(UuidType now, BranchEnum b) {
 	if (deref(now) == nullptr)
 		return LogicalNode::null;
 	if (deref(now)->getType() == NodeEnum::Answer)
-		return;
+		return LogicalNode::null;
 	return dynamic_cast<QueryNode *>(deref(now))->getBranch(b);
 }
 

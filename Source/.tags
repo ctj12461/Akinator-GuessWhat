@@ -1,0 +1,140 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AnswerNode	.\Model\ExtendedNode.cpp	/^AnswerNode::AnswerNode(string t) : LogicalNode(NodeEnum::Answer, t) {$/;"	f	class:Model::AnswerNode
+AnswerNode	.\Model\ExtendedNode.h	/^class AnswerNode : public LogicalNode {$/;"	c	namespace:Model
+BlockSize	.\Model\NodePool.h	/^	static constexpr UuidType BlockSize = 1000;$/;"	m	class:Model::DataBlock
+BranchEnum	.\Model\Definition.h	/^enum class BranchEnum {$/;"	c
+DATABASE_H	.\Model\Database.h	2;"	d
+DEFINITION	.\Model\Definition.h	2;"	d
+DataBlock	.\Model\NodePool.cpp	/^DataBlock::DataBlock() : size(0) {$/;"	f	class:Model::DataBlock
+DataBlock	.\Model\NodePool.h	/^class DataBlock {$/;"	c	namespace:Model
+DatabaseAttribute	.\Model\Database.h	/^	DatabaseAttribute() : total(0), blockTotal(0), name("") {}$/;"	f	struct:Model::DatabaseAttribute
+DatabaseAttribute	.\Model\Database.h	/^struct DatabaseAttribute {$/;"	s	namespace:Model
+DatabaseBlock	.\Model\Database.h	/^	DatabaseBlock() : uuid(0) {}$/;"	f	struct:Model::DatabaseBlock
+DatabaseBlock	.\Model\Database.h	/^	DatabaseBlock(UuidType id, const vector<string> &v) : uuid(id), data(v) {}$/;"	f	struct:Model::DatabaseBlock
+DatabaseBlock	.\Model\Database.h	/^struct DatabaseBlock {$/;"	s	namespace:Model
+DatabaseController	.\Model\Database.cpp	/^DatabaseController::DatabaseController(string name) {$/;"	f	class:Model::DatabaseController
+DatabaseController	.\Model\Database.h	/^class DatabaseController {$/;"	c	namespace:Model
+EXTENDED_NODE	.\Model\ExtendedNode.h	2;"	d
+LOGICAL_NODE	.\Model\LogicalNode.h	2;"	d
+LogicalNode	.\Model\LogicalNode.h	/^class LogicalNode {$/;"	c	namespace:Model
+Model	.\Model\Database.cpp	/^namespace Model {$/;"	n	file:
+Model	.\Model\Database.h	/^namespace Model {$/;"	n
+Model	.\Model\ExtendedNode.cpp	/^namespace Model {$/;"	n	file:
+Model	.\Model\ExtendedNode.h	/^namespace Model {$/;"	n
+Model	.\Model\LogicalNode.cpp	/^namespace Model {$/;"	n	file:
+Model	.\Model\LogicalNode.h	/^namespace Model {$/;"	n
+Model	.\Model\Network.cpp	/^namespace Model {$/;"	n	file:
+Model	.\Model\Network.h	/^namespace Model {$/;"	n
+Model	.\Model\NodePool.cpp	/^namespace Model {$/;"	n	file:
+Model	.\Model\NodePool.h	/^namespace Model {$/;"	n
+NETWORK_H	.\Model\Network.h	2;"	d
+NODEPOOL_H	.\Model\NodePool.h	2;"	d
+Network	.\Model\Network.cpp	/^Network::Network(NodePool *p) : pool(p), current(origin) {$/;"	f	class:Model::Network
+Network	.\Model\Network.h	/^class Network {$/;"	c	namespace:Model
+No	.\Model\Definition.h	/^	No, Yes$/;"	m	class:BranchEnum
+NodeEnum	.\Model\Definition.h	/^enum class NodeEnum {$/;"	c
+NodePool	.\Model\NodePool.cpp	/^NodePool::NodePool(DatabaseController *p) : database(p) {$/;"	f	class:Model::NodePool
+NodePool	.\Model\NodePool.h	/^class NodePool {$/;"	c	namespace:Model
+Query	.\Model\Definition.h	/^	Query, Answer$/;"	m	class:NodeEnum
+QueryNode	.\Model\ExtendedNode.cpp	/^QueryNode::QueryNode(string t) : LogicalNode(NodeEnum::Query, t) {$/;"	f	class:Model::QueryNode
+QueryNode	.\Model\ExtendedNode.h	/^class QueryNode : public LogicalNode {$/;"	c	namespace:Model
+add	.\Model\Test-NodePool\Test.cpp	/^void add(LogicalNode *p) {$/;"	f
+addNode	.\Model\Network.cpp	/^void Network::addNode(LogicalNode *p) {$/;"	f	class:Model::Network
+attribute	.\Model\Database.h	/^	DatabaseAttribute attribute;$/;"	m	class:Model::DatabaseController
+blockTotal	.\Model\Database.h	/^	UuidType blockTotal;$/;"	m	struct:Model::DatabaseAttribute
+blockTotal	.\Model\NodePool.h	/^	UuidType blockTotal;$/;"	m	class:Model::NodePool
+blocks	.\Model\NodePool.h	/^	unordered_map<UuidType, DataBlock *> blocks;$/;"	m	class:Model::NodePool
+branch	.\Model\ExtendedNode.h	/^	UuidType branch[2];$/;"	m	class:Model::QueryNode
+close	.\Model\Database.cpp	/^void DatabaseController::close() {$/;"	f	class:Model::DatabaseController
+current	.\Model\Network.h	/^	UuidType current;$/;"	m	class:Model::Network
+data	.\Model\Database.h	/^	vector<string> data;$/;"	m	struct:Model::DatabaseBlock
+database	.\Model\NodePool.h	/^	DatabaseController *database;$/;"	m	class:Model::NodePool
+deref	.\Model\Network.cpp	/^LogicalNode *Network::deref(UuidType id) {$/;"	f	class:Model::Network
+deserialize	.\Model\NodePool.cpp	/^void DataBlock::deserialize(const vector<string> &data) {$/;"	f	class:Model::DataBlock
+exist	.\Model\Network.cpp	/^bool Network::exist(UuidType id) const {$/;"	f	class:Model::Network
+extend	.\Model\Network.cpp	/^void Network::extend(string query, string answer, BranchEnum which) {$/;"	f	class:Model::Network
+get	.\Model\NodePool.cpp	/^LogicalNode *DataBlock::get(UuidType id) const {$/;"	f	class:Model::DataBlock
+getAttribute	.\Model\Database.cpp	/^DatabaseAttribute DatabaseController::getAttribute() const {$/;"	f	class:Model::DatabaseController
+getBlock	.\Model\Database.cpp	/^DatabaseBlock DatabaseController::getBlock(UuidType id) const {$/;"	f	class:Model::DatabaseController
+getCurrentUuid	.\Model\Network.cpp	/^UuidType Network::getCurrentUuid() const {$/;"	f	class:Model::Network
+getFileName	.\Model\Database.cpp	/^string DatabaseController::getFileName(string dir, string name, string prefix) const {$/;"	f	class:Model::DatabaseController
+getSize	.\Model\NodePool.cpp	/^UuidType DataBlock::getSize() const {$/;"	f	class:Model::DataBlock
+getText	.\Model\Network.cpp	/^string Network::getText() {$/;"	f	class:Model::Network
+getUuid	.\Model\Database.h	/^	UuidType getUuid() {$/;"	f	struct:Model::DatabaseBlock
+goNext	.\Model\Network.cpp	/^void Network::goNext(BranchEnum b) {$/;"	f	class:Model::Network
+goPrevious	.\Model\Network.cpp	/^void Network::goPrevious() {$/;"	f	class:Model::Network
+isEnd	.\Model\Network.cpp	/^bool Network::isEnd() {$/;"	f	class:Model::Network
+isVaild	.\Model\Network.cpp	/^bool Network::isVaild() {$/;"	f	class:Model::Network
+load	.\Model\Network.cpp	/^void Network::load(UuidType id) {$/;"	f	class:Model::Network
+load	.\Model\NodePool.cpp	/^void NodePool::load(function<void(LogicalNode *)> f, UuidType id) {$/;"	f	class:Model::NodePool
+main	.\Model\Test-Database\Test.cpp	/^int main() {$/;"	f
+main	.\Model\Test-Network\Test.cpp	/^int main() {$/;"	f
+main	.\Model\Test-NodePool\Test.cpp	/^int main() {$/;"	f
+main	.\Model\Test-Nodes\Test.cpp	/^int main() {$/;"	f
+name	.\Model\Database.h	/^	string name;$/;"	m	struct:Model::DatabaseAttribute
+network	.\Model\Test-Network\Test.cpp	/^Network network;$/;"	v
+newAnswerNode	.\Model\NodePool.cpp	/^AnswerNode *DataBlock::newAnswerNode(string text, UuidType id) {$/;"	f	class:Model::DataBlock
+newAnswerNode	.\Model\NodePool.cpp	/^AnswerNode *NodePool::newAnswerNode(string text) {$/;"	f	class:Model::NodePool
+newDataBlock	.\Model\NodePool.cpp	/^UuidType NodePool::newDataBlock() {$/;"	f	class:Model::NodePool
+newQueryNode	.\Model\NodePool.cpp	/^QueryNode *DataBlock::newQueryNode(string text, UuidType id) {$/;"	f	class:Model::DataBlock
+newQueryNode	.\Model\NodePool.cpp	/^QueryNode *NodePool::newQueryNode(string text) {$/;"	f	class:Model::NodePool
+next	.\Model\Network.cpp	/^UuidType Network::next(UuidType now, BranchEnum b) {$/;"	f	class:Model::Network
+nodes	.\Model\Network.h	/^	unordered_map<UuidType, LogicalNode *> nodes;$/;"	m	class:Model::Network
+nodes	.\Model\NodePool.h	/^	LogicalNode *nodes[BlockSize];$/;"	m	class:Model::DataBlock
+noexcept	.\Model\ExtendedNode.h	/^	UuidType getBranch(BranchEnum b) const noexcept;$/;"	m	class:Model::QueryNode
+noexcept	.\Model\ExtendedNode.h	/^	void setBranch(BranchEnum b, UuidType id) noexcept;$/;"	m	class:Model::QueryNode
+noexcept	.\Model\ExtendedNode.h	/^	~AnswerNode() noexcept;$/;"	m	class:Model::AnswerNode
+noexcept	.\Model\ExtendedNode.h	/^	~QueryNode() noexcept;$/;"	m	class:Model::QueryNode
+noexcept	.\Model\LogicalNode.h	/^	LogicalNode(NodeEnum n, string t = "") noexcept;$/;"	m	class:Model::LogicalNode
+noexcept	.\Model\LogicalNode.h	/^	NodeEnum getType() const noexcept;$/;"	m	class:Model::LogicalNode
+noexcept	.\Model\LogicalNode.h	/^	UuidType getPrevious() const noexcept;$/;"	m	class:Model::LogicalNode
+noexcept	.\Model\LogicalNode.h	/^	UuidType getUuid() const noexcept;$/;"	m	class:Model::LogicalNode
+noexcept	.\Model\LogicalNode.h	/^	bool isEnd() const noexcept;$/;"	m	class:Model::LogicalNode
+noexcept	.\Model\LogicalNode.h	/^	string getText() const noexcept;$/;"	m	class:Model::LogicalNode
+noexcept	.\Model\LogicalNode.h	/^	virtual ~LogicalNode() noexcept;$/;"	m	class:Model::LogicalNode
+noexcept	.\Model\LogicalNode.h	/^	void setPrevious(UuidType id) noexcept;$/;"	m	class:Model::LogicalNode
+noexcept	.\Model\LogicalNode.h	/^	void setText(string t) noexcept;$/;"	m	class:Model::LogicalNode
+noexcept	.\Model\LogicalNode.h	/^	void setUuid(UuidType id) noexcept;$/;"	m	class:Model::LogicalNode
+noexcept	.\Model\Network.h	/^	BranchEnum other(BranchEnum b) const noexcept;$/;"	m	class:Model::Network
+noexcept	.\Model\Network.h	/^	~Network() noexcept;$/;"	m	class:Model::Network
+noexcept	.\Model\NodePool.h	/^	DatabaseController *getDatabaseController() const noexcept;$/;"	m	class:Model::NodePool
+noexcept	.\Model\NodePool.h	/^	UuidType getBlockId(UuidType uuid) const noexcept;$/;"	m	class:Model::NodePool
+noexcept	.\Model\NodePool.h	/^	UuidType size() const noexcept;$/;"	m	class:Model::NodePool
+noexcept	.\Model\NodePool.h	/^	bool exist(UuidType uuid) noexcept;$/;"	m	class:Model::NodePool
+null	.\Model\LogicalNode.h	/^	static constexpr UuidType null = 0;$/;"	m	class:Model::LogicalNode
+open	.\Model\Database.cpp	/^void DatabaseController::open(string name) {$/;"	f	class:Model::DatabaseController
+origin	.\Model\Network.h	/^	static constexpr UuidType origin = 1;$/;"	m	class:Model::Network
+output	.\Model\Test-NodePool\Test.cpp	/^void output() {$/;"	f
+pool	.\Model\Network.h	/^	NodePool *pool;$/;"	m	class:Model::Network
+pool	.\Model\Test-Network\Test.cpp	/^NodePool pool;$/;"	v
+pool	.\Model\Test-NodePool\Test.cpp	/^NodePool pool;$/;"	v
+previous	.\Model\LogicalNode.cpp	/^    : uuid(LogicalNode::null), previous(LogicalNode::null) {$/;"	f	namespace:Model
+previous	.\Model\LogicalNode.h	/^	UuidType previous;$/;"	m	class:Model::LogicalNode
+reset	.\Model\Network.cpp	/^void Network::reset() {$/;"	f	class:Model::Network
+save	.\Model\NodePool.cpp	/^void NodePool::save() {$/;"	f	class:Model::NodePool
+serialize	.\Model\NodePool.cpp	/^vector<string> DataBlock::serialize() const {$/;"	f	class:Model::DataBlock
+setAttribute	.\Model\Database.cpp	/^void DatabaseController::setAttribute(DatabaseAttribute attr) {$/;"	f	class:Model::DatabaseController
+setBlock	.\Model\Database.cpp	/^void DatabaseController::setBlock(UuidType id, DatabaseBlock block) {$/;"	f	class:Model::DatabaseController
+setCurrentUuid	.\Model\Network.cpp	/^void Network::setCurrentUuid(UuidType id) {$/;"	f	class:Model::Network
+setDatabaseController	.\Model\NodePool.cpp	/^void NodePool::setDatabaseController(DatabaseController *p) {$/;"	f	class:Model::NodePool
+setNodePool	.\Model\Network.cpp	/^void Network::setNodePool(NodePool *p) {$/;"	f	class:Model::Network
+setUuid	.\Model\Database.h	/^	void setUuid(int id) {$/;"	f	struct:Model::DatabaseBlock
+size	.\Model\Network.cpp	/^UuidType Network::size() const {$/;"	f	class:Model::Network
+size	.\Model\NodePool.h	/^	UuidType size;$/;"	m	class:Model::DataBlock
+text	.\Model\LogicalNode.h	/^	string text;$/;"	m	class:Model::LogicalNode
+total	.\Model\Database.h	/^	UuidType total;$/;"	m	struct:Model::DatabaseAttribute
+total	.\Model\NodePool.h	/^	UuidType total;$/;"	m	class:Model::NodePool
+type	.\Model\LogicalNode.h	/^	NodeEnum type;$/;"	m	class:Model::LogicalNode
+uuid	.\Model\Database.h	/^	UuidType uuid;$/;"	m	struct:Model::DatabaseBlock
+uuid	.\Model\LogicalNode.h	/^	UuidType uuid;$/;"	m	class:Model::LogicalNode
+vec	.\Model\Test-NodePool\Test.cpp	/^vector<LogicalNode *> vec;$/;"	v
+~DataBlock	.\Model\NodePool.cpp	/^DataBlock::~DataBlock() {$/;"	f	class:Model::DataBlock
+~DatabaseAttribute	.\Model\Database.h	/^	~DatabaseAttribute() {}$/;"	f	struct:Model::DatabaseAttribute
+~DatabaseBlock	.\Model\Database.h	/^	~DatabaseBlock() {}$/;"	f	struct:Model::DatabaseBlock
+~DatabaseController	.\Model\Database.cpp	/^DatabaseController::~DatabaseController() {$/;"	f	class:Model::DatabaseController
+~NodePool	.\Model\NodePool.cpp	/^NodePool::~NodePool() {$/;"	f	class:Model::NodePool

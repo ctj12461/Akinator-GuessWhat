@@ -50,6 +50,7 @@ public:
 	DatabaseController *getDatabaseController() const noexcept;
 	void load(function<void(LogicalNode *)> f, UuidType id);
 	void save();
+	UuidType size() const noexcept;
 private:
 	unordered_map<UuidType, DataBlock *> blocks;
 	UuidType total;
