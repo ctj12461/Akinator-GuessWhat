@@ -38,7 +38,7 @@ struct DatabaseBlock {
 
 class DatabaseController {
 public:
-	DatabaseController();
+	DatabaseController(string name = "");
 	~DatabaseController();
 
 	void open(string name);
@@ -51,6 +51,8 @@ public:
 	void setBlock(UuidType id, DatabaseBlock block);
 private:
 	DatabaseAttribute attribute;
+
+	string getFileName(string dir, string name, string prefix) const;
 };
 
 }

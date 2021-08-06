@@ -1,0 +1,7 @@
+1 0 Query 4 6 1 - QueryNode
+2 4 Answer 2 - AnswerNode (Yes)
+3 6 Answer 3 - AnswerNode (No)
+4 1 Query 2 5 New QueryNode 1
+5 4 Answer New AnswerNode (No)
+6 1 Query 7 3 New QueryNode 2
+7 6 Answer New AnswerNode (Yes)
