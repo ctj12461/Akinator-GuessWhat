@@ -2,6 +2,10 @@
 #define MENU
 
 #include <string>
+#include <vector>
+#include <utility>
+
+using namespace std;
 
 namespace View {
 
@@ -12,9 +16,9 @@ public:
 
     void setTitle(string ti);
     void addItem(string item);
-    int show();
+    pair<int, string> show();
 private:
-    stirng title;
+    string title;
     vector<string> items;
 };
 
