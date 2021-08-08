@@ -20,11 +20,11 @@ int main() {
     menu.addItem("Quit");
 
     /** 询问 */
-    pair<int, string> res;
+    MenuResult res;
     do {
         res = menu.show();
-        cout << "You chose " << res.first << " - " << res.second << endl;
-    } while (res.second != "Quit");
+        cout << "You chose " << res.id << " - " << res.item << endl;
+    } while (res.item != "Quit"s);
 
     return 0;
 }

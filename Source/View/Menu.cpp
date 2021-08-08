@@ -37,8 +37,9 @@ void Menu::addItem(string item) {
  * @return 选择的项目编号
  * @date   2021-08-07
  */
-pair<int, string> Menu::show() {
-    cout << " [ " << title << " ]" << endl;
+MenuResult Menu::show() {
+    if (title.size() != 0)
+        cout << " [ " << title << " ]" << endl;
     for (int i = 0; i < items.size(); ++i) {
         string number = to_string(i + 1) + string(")");
         cout << " " << setw(4) << left << number << items[i] << endl;
@@ -56,7 +57,7 @@ pair<int, string> Menu::show() {
             cout << "> ";
         }
     } while (choice > items.size() || choice < 1);
-    return make_pair(choice, items[choice - 1]);
+    return {choice, items[choice - 1]};
 }
 
 }

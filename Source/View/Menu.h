@@ -1,5 +1,5 @@
-#ifndef MENU
-#define MENU
+#ifndef MENU_H
+#define MENU_H
 
 #include <string>
 #include <vector>
@@ -9,6 +9,11 @@ using namespace std;
 
 namespace View {
 
+struct MenuResult {
+    int id;
+    string item;
+};
+
 class Menu {
 public:
     Menu();
@@ -16,7 +21,7 @@ public:
 
     void setTitle(string ti);
     void addItem(string item);
-    pair<int, string> show();
+    MenuResult show();
 private:
     string title;
     vector<string> items;
