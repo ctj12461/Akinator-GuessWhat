@@ -42,12 +42,14 @@ string InputBox::input() {
     cout << text << endl;
     cout << "> ";
     string in;
+    bool first = true;
     do {
         getline(cin, in, '\n');
-        if (in.size() == 0) {
+        if (in.size() == 0 && first == false) {
             cout << "Invaild input." << endl;
             cout << "> ";
         }
+        first = false;
     } while (in.size() == 0);
     return in;
 }

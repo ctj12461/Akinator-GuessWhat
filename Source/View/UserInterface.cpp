@@ -1,7 +1,8 @@
 #include "UserInterface.h"
+#include "InputBox.h"
 
 #include <iostream>
-#include <stirng>
+#include <string>
 
 using namespace std;
 
@@ -26,7 +27,7 @@ void UserInterface::start() {
          << R"(/ /_/ / /_/ /  __(__  |__  )| |/ |/ / / / / /_/ / /_  )" << endl
          << R"(\____/\__,_/\___/____/____/ |__/|__/_/ /_/\__,_/\__/  )" << endl 
          << R"(                                                      )" << endl;
-    cout << R"(           Welcome to Akinator:GuessWhat.             )" << endl;
+    cout << R"(               Welcome to GuessWhat                   )" << endl;
     cout << R"(      Copyright (C) Justin Chen (aka ctj12461)        )" << endl;
     cout << endl;
 }
@@ -41,6 +42,7 @@ MenuResult UserInterface::ask(string question) {
     Menu menu;
     menu.addItem("Yes");
     menu.addItem("No");
+    cout << endl;
     cout << question << endl;
     return menu.show();
 }
@@ -64,7 +66,8 @@ MenuResult UserInterface::confirm(string answer) {
  * 答对时的表现
  * @date 2021-08-08
  */
-void UesrInterface::cheer() {
+void UserInterface::cheer() {
+    cout << endl;
     cout << "How smart I am." << endl;
 }
 
@@ -75,14 +78,21 @@ void UesrInterface::cheer() {
  * @date   2021-08-08
  */
 LearningResult UserInterface::learn(string answer) {
+    /** 询问正确答案 */
+    cout << endl;
     InputBox box;
     box.setText("Who is he or she?");
     string newAnswer = box.input();
+
+    /** 询问新的问题 */
+    cout << endl;
     string askText = "Could you tell me a question which helps me recognize ";
     askText += newAnswer + " and " + answer + "?";
     box.setText(askText);
     string question = box.input();
 
+    /** 询问正确答案对应新问题的答案 */
+    cout << endl;
     Menu menu;
     menu.addItem("Yes");
     menu.addItem("No");
@@ -98,6 +108,7 @@ LearningResult UserInterface::learn(string answer) {
  * @date   2021-08-08
  */
 MenuResult UserInterface::again() {
+    cout << endl;
     cout << "Would you like to play again?" << endl;
     Menu menu;
     menu.addItem("Yes");
@@ -110,6 +121,7 @@ MenuResult UserInterface::again() {
  * @date 2021-08-08
  */
 void UserInterface::quit() {
+    cout << endl;
     cout << "See you next time." << endl;
 }
 
