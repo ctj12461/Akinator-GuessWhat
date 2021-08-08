@@ -164,17 +164,22 @@
 		"/D/Projects/GuessWhat/Prototype",
 		"/D/Projects/GuessWhat/Source",
 		"/D/Projects/GuessWhat/Source/View",
-		"/D/Projects/GuessWhat/Source/View/Test-Menu"
+		"/D/Projects/GuessWhat/Source/View/Test-InputBox",
+		"/D/Projects/GuessWhat/Source/View/Test-UserInterface"
 	],
 	"file_history":
 	[
+		"/D/Projects/GuessWhat/Source/View/Test-UserInterface/Test.cpp",
+		"/D/Projects/GuessWhat/Source/View/Test-UserInterface/Makefile",
+		"/D/Projects/GuessWhat/Source/View/Test-InputBox/Makefile",
+		"/D/Projects/GuessWhat/Source/View/Test-InputBox/Test.cpp",
+		"/D/Projects/GuessWhat/Prototype/Prototype.cpp",
+		"/D/Projects/GuessWhat/Source/View/UserInterface.cpp",
+		"/D/Projects/GuessWhat/Source/View/UserInterface.h",
 		"/C/Users/Justin Chen/Desktop/新建文件夹/source/std/group.cpp",
 		"/D/Programs/Tickeys/data/sound.json",
 		"/D/Programs/Tickeys_bak/data/sound.json",
 		"/C/Users/Justin Chen/AppData/Local/Temp/7zO4A387DB7/schemes.json",
-		"/D/Projects/GuessWhat/Source/View/UserInterface.h",
-		"/D/Projects/GuessWhat/Prototype/Prototype.cpp",
-		"/D/Projects/GuessWhat/Source/View/UserInterface.cpp",
 		"/D/Projects/GuessWhat/Source/View/Menu.cpp",
 		"/D/Projects/GuessWhat/README.md",
 		"/D/Projects/GuessWhat/Source/View/Test-Menu/tmp",
@@ -217,7 +222,7 @@
 	],
 	"find":
 	{
-		"height": 28.0
+		"height": 26.4
 	},
 	"find_in_files":
 	{
@@ -231,6 +236,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"InputBox",
 			"description",
 			"pair<int, string>",
 			"LogicalNode",
@@ -266,7 +272,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 26.4
 	},
 	"input":
 	{
@@ -315,7 +321,7 @@
 	"project": "GuessWhat.sublime-project",
 	"replace":
 	{
-		"height": 52.8
+		"height": 49.6
 	},
 	"save_all_on_build": true,
 	"select_file":
