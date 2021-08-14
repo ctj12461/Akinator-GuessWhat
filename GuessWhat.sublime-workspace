@@ -4,12 +4,36 @@
 		"selected_items":
 		[
 			[
-				"asn",
-				"newAnswer"
+				"Game",
+				"GameController"
+			],
+			[
+				"Ga",
+				"GameController"
+			],
+			[
+				"clas",
+				"class"
 			],
 			[
 				"Me",
 				"MenuResult"
+			],
+			[
+				"inc",
+				"inc"
+			],
+			[
+				"U",
+				"UserInterface"
+			],
+			[
+				"cal",
+				"class"
+			],
+			[
+				"asn",
+				"newAnswer"
 			],
 			[
 				"me",
@@ -26,10 +50,6 @@
 			[
 				"unor",
 				"unordered_map"
-			],
-			[
-				"clas",
-				"class"
 			],
 			[
 				"brac",
@@ -91,6 +111,22 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"utf8",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"conv",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"con",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"convert",
+				"ConvertToUTF8: Reload with Encoding"
+			],
 			[
 				"pcr",
 				"Package Control: Remove Package"
@@ -160,22 +196,42 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Projects/GuessWhat",
-		"/D/Projects/GuessWhat/Prototype",
-		"/D/Projects/GuessWhat/Source",
-		"/D/Projects/GuessWhat/Source/View",
-		"/D/Projects/GuessWhat/Source/View/Test-InputBox",
-		"/D/Projects/GuessWhat/Source/View/Test-UserInterface"
 	],
 	"file_history":
 	[
+		"/D/Projects/GuessWhat/Source/Makefile",
+		"/D/Projects/GuessWhat/Source/Main.cpp",
+		"/D/Projects/GuessWhat/Source/View/UserInterface.cpp",
+		"/D/Projects/GuessWhat/Source/GameController.cpp",
+		"/D/Projects/GuessWhat/Source/Model/Test-Database/TestDatabase/1.gwdb-data",
+		"/D/Projects/GuessWhat/Source/GameChecker.h",
+		"/D/Projects/GuessWhat/Source/GameChecker.cpp",
+		"/D/Projects/GuessWhat/Source/GameController.h",
+		"/D/Projects/GuessWhat/Source/View/UserInterface.h",
+		"/D/Projects/GuessWhat/Source/Model/Network.h",
+		"/D/Projects/GuessWhat/Source/Model/Network.cpp",
+		"/D/Projects/GuessWhat/Source/Model/Database.h",
+		"/D/Projects/GuessWhat/Source/Model/Database.cpp",
+		"/D/Projects/GuessWhat/Source/Model/NodePool.h",
+		"/D/Projects/GuessWhat/Source/Model/NodePool.cpp",
+		"/D/Projects/GuessWhat/Source/d",
+		"/D/Projects/GuessWhat/Source/Model/ExtendedNode.h",
+		"/D/Projects/GuessWhat/Source/Model/Test-Nodes/Makefile",
+		"/D/Projects/GuessWhat/Source/Model/Test-Network/Makefile",
+		"/D/Projects/GuessWhat/Source/Model/Test-Database/Makefile",
+		"/D/Projects/GuessWhat/Source/Model/Test-Database/Test.cpp",
+		"/D/Projects/GuessWhat/Prototype/database.txt",
+		"/D/Projects/GuessWhat/Source/Model/Definition.h",
+		"/D/Projects/GuessWhat/Source/View/InputBox.h",
+		"/D/Projects/GuessWhat/Source/View/Menu.h",
+		"/D/Programs/Sublime Merge/Data/Packages/User/Preferences.sublime-settings",
 		"/D/Projects/GuessWhat/Source/View/Test-UserInterface/Test.cpp",
+		"/D/Projects/GuessWhat/Source/View/InputBox.cpp",
 		"/D/Projects/GuessWhat/Source/View/Test-UserInterface/Makefile",
+		"/D/Projects/GuessWhat/Source/View/Test-Menu/Makefile",
 		"/D/Projects/GuessWhat/Source/View/Test-InputBox/Makefile",
 		"/D/Projects/GuessWhat/Source/View/Test-InputBox/Test.cpp",
 		"/D/Projects/GuessWhat/Prototype/Prototype.cpp",
-		"/D/Projects/GuessWhat/Source/View/UserInterface.cpp",
-		"/D/Projects/GuessWhat/Source/View/UserInterface.h",
 		"/C/Users/Justin Chen/Desktop/新建文件夹/source/std/group.cpp",
 		"/D/Programs/Tickeys/data/sound.json",
 		"/D/Programs/Tickeys_bak/data/sound.json",
@@ -183,20 +239,14 @@
 		"/D/Projects/GuessWhat/Source/View/Menu.cpp",
 		"/D/Projects/GuessWhat/README.md",
 		"/D/Projects/GuessWhat/Source/View/Test-Menu/tmp",
-		"/D/Projects/GuessWhat/Source/View/Menu.h",
 		"/D/Projects/GuessWhat/Source/View/Test-Menu/Test.cpp",
-		"/D/Projects/GuessWhat/Source/Model/Network.h",
-		"/D/Projects/GuessWhat/Source/Model/Network.cpp",
 		"/D/Projects/GuessWhat/Source/Model/Defination.h",
 		"/D/Projects/GuessWhat/Source/Model/LogicalNode.h",
 		"/D/Projects/GuessWhat/Source/Model/LogicalNode.cpp",
 		"/D/Projects/GuessWhat/Source/Model/ExtendedNode.cpp",
-		"/D/Projects/GuessWhat/Source/Model/ExtendedNode.h",
 		"/C/Users/Justin Chen/AppData/Roaming/Sublime Text/Packages/User/Base File.sublime-settings",
 		"/C/Users/Justin Chen/AppData/Roaming/Sublime Text/Packages/DocBlockr/README.md",
 		"/C/Users/Justin Chen/AppData/Roaming/Sublime Text/Packages/DocBlockr/Base File.sublime-settings",
-		"/D/Programs/Sublime Merge/Data/Packages/User/Preferences.sublime-settings",
-		"/D/Projects/GuessWhat/Prototype/database.txt",
 		"/D/Projects/GuessWhat/.gitattributes",
 		"/D/Projects/GuessWhat/.editorconfig",
 		"/D/Projects/GuessWhat/LICENSE CC BY-SA v4",
@@ -236,6 +286,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"NodePool",
+			"cout",
+			"void",
+			"No",
+			"Yes",
+			"do",
+			"       \n",
+			"start",
 			"InputBox",
 			"description",
 			"pair<int, string>",
@@ -330,6 +388,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"gamcpp",
+				"Source\\GameController.cpp"
+			],
+			[
+				"net",
+				"Source\\Model\\Network.h"
+			],
+			[
+				"Us",
+				"Source\\View\\UserInterface.cpp"
+			],
+			[
+				"use",
+				"Source\\View\\UserInterface.h"
+			],
+			[
+				"inter",
+				"Source\\View\\UserInterface.cpp"
+			],
 			[
 				"柠檬",
 				"Storage\\Luogu\\P5504-柠檬.cpp"

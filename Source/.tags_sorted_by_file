@@ -1,3 +1,19 @@
+Controller	GameController.cpp	/^namespace Controller {$/;"	n	file:
+game	GameController.cpp	/^void GameController::game() {$/;"	f	class:Controller::GameController
+init	GameController.cpp	/^void GameController::init(string name) {$/;"	f	class:Controller::GameController
+loop	GameController.cpp	/^void GameController::loop() {$/;"	f	class:Controller::GameController
+quit	GameController.cpp	/^void GameController::quit() {$/;"	f	class:Controller::GameController
+Controller	GameController.h	/^namespace Controller {$/;"	n
+DatabaseController	GameController.h	/^class Model::DatabaseController;$/;"	m	class:Model	typeref:class:Model::
+GAMECONTROLLER_H	GameController.h	2;"	d
+GameController	GameController.h	/^class GameController {$/;"	c	namespace:Controller
+Network	GameController.h	/^class Model::Network;$/;"	m	class:Model	typeref:class:Model::
+NodePool	GameController.h	/^class Model::NodePool;$/;"	m	class:Model	typeref:class:Model::
+UserInterface	GameController.h	/^class View::UserInterface;$/;"	m	class:View	typeref:class:View::
+database	GameController.h	/^    Model::DatabaseController *database;$/;"	m	class:Controller::GameController
+network	GameController.h	/^    Model::Network *network;$/;"	m	class:Controller::GameController
+pool	GameController.h	/^    Model::NodePool *pool;$/;"	m	class:Controller::GameController
+ui	GameController.h	/^    View::UserInterface *ui;$/;"	m	class:Controller::GameController
 DatabaseController	Model\Database.cpp	/^DatabaseController::DatabaseController(string name) {$/;"	f	class:Model::DatabaseController
 Model	Model\Database.cpp	/^namespace Model {$/;"	n	file:
 close	Model\Database.cpp	/^void DatabaseController::close() {$/;"	f	class:Model::DatabaseController
@@ -145,16 +161,37 @@ Menu	View\Menu.cpp	/^Menu::Menu() {$/;"	f	class:View::Menu
 View	View\Menu.cpp	/^namespace View {$/;"	n	file:
 addItem	View\Menu.cpp	/^void Menu::addItem(string item) {$/;"	f	class:View::Menu
 setTitle	View\Menu.cpp	/^void Menu::setTitle(string ti) {$/;"	f	class:View::Menu
-show	View\Menu.cpp	/^pair<int, string> Menu::show() {$/;"	f	class:View::Menu
+show	View\Menu.cpp	/^MenuResult Menu::show() {$/;"	f	class:View::Menu
 ~Menu	View\Menu.cpp	/^Menu::~Menu() {$/;"	f	class:View::Menu
 MENU_H	View\Menu.h	2;"	d
 Menu	View\Menu.h	/^class Menu {$/;"	c	namespace:View
+MenuResult	View\Menu.h	/^struct MenuResult {$/;"	s	namespace:View
 View	View\Menu.h	/^namespace View {$/;"	n
+id	View\Menu.h	/^    int id;$/;"	m	struct:View::MenuResult
+item	View\Menu.h	/^    string item;$/;"	m	struct:View::MenuResult
 items	View\Menu.h	/^    vector<string> items;$/;"	m	class:View::Menu
 title	View\Menu.h	/^    string title;$/;"	m	class:View::Menu
 main	View\Test-InputBox\Test.cpp	/^int main() {$/;"	f
 text	View\Test-InputBox\Test.cpp	/^string text;$/;"	v
 main	View\Test-Menu\Test.cpp	/^int main() {$/;"	f
+main	View\Test-UserInterface\Test.cpp	/^int main() {$/;"	f
+UserInterface	View\UserInterface.cpp	/^UserInterface::UserInterface() {$/;"	f	class:View::UserInterface
+View	View\UserInterface.cpp	/^namespace View {$/;"	n	file:
+again	View\UserInterface.cpp	/^MenuResult UserInterface::again() {$/;"	f	class:View::UserInterface
+ask	View\UserInterface.cpp	/^MenuResult UserInterface::ask(string question) {$/;"	f	class:View::UserInterface
+cheer	View\UserInterface.cpp	/^void UserInterface::cheer() {$/;"	f	class:View::UserInterface
+confirm	View\UserInterface.cpp	/^MenuResult UserInterface::confirm(string answer) {$/;"	f	class:View::UserInterface
+learn	View\UserInterface.cpp	/^LearningResult UserInterface::learn(string answer) {$/;"	f	class:View::UserInterface
+quit	View\UserInterface.cpp	/^void UserInterface::quit() {$/;"	f	class:View::UserInterface
+start	View\UserInterface.cpp	/^void UserInterface::start() {$/;"	f	class:View::UserInterface
+~UserInterface	View\UserInterface.cpp	/^UserInterface::~UserInterface() {$/;"	f	class:View::UserInterface
+LearningResult	View\UserInterface.h	/^struct LearningResult {$/;"	s	namespace:View
+USERINTERFACE_H	View\UserInterface.h	2;"	d
+UserInterface	View\UserInterface.h	/^class UserInterface {$/;"	c	namespace:View
+View	View\UserInterface.h	/^namespace View {$/;"	n
+answer	View\UserInterface.h	/^    string answer;$/;"	m	struct:View::LearningResult
+branch	View\UserInterface.h	/^    MenuResult branch;$/;"	m	struct:View::LearningResult
+question	View\UserInterface.h	/^    string question;$/;"	m	struct:View::LearningResult
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_PROGRAM_VERSION	5.8	//

@@ -33,6 +33,16 @@ void UserInterface::start() {
 }
 
 /**
+ * 介绍游戏玩法
+ * @date 2021-08-14
+ */
+void UserInterface::introduce() {
+    cout << endl;
+    cout << "Hello!!!" << endl;
+    cout << "Please answer my questions and I\'ll try to guess what you are thinking." << endl;
+}
+
+/**
  * 询问一个问题，并返回 Yes 或 No
  * @param  question   问题文本
  * @return            输入的结果
@@ -98,6 +108,8 @@ LearningResult UserInterface::learn(string answer) {
     menu.addItem("No");
     cout << "What's the answer if he or she is "s + newAnswer + "?" << endl;
     MenuResult res = menu.show();
+
+    /** 感谢 */
     cout << "Thank you very much. I learn from you a lot." << endl;
     return {question, newAnswer, res};
 }

@@ -19,6 +19,7 @@ public:
     ~UserInterface();
     
     void start();
+    void introduce();
     MenuResult ask(string question);
     MenuResult confirm(string answer);
     void cheer();
