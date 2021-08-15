@@ -21,7 +21,7 @@ them accurately. It's sure that this game will bring you a great of fun.
  configure files, it can be built in any OS with a `C++` complier.
  - Use `git clone` to clone this repository and run `make` to build this game.
  ```shell
-git https://github.com/ctj12461/GuessWhat.git
+git clone https://github.com/ctj12461/GuessWhat.git
 cd GuessWhat/Source
 make && make sweep
 ./GuessWhat
