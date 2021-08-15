@@ -80,294 +80,70 @@
 	"buffers":
 	[
 		{
-			"file": "Source/GameController.h",
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 544,
+				"buffer_size": 1249,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			},
 			"undo_stack":
 			[
 				[
-					23,
+					9,
 					1,
 					"insert",
 					{
-						"characters": "\nnae"
+						"characters": "\n\n###"
 					},
-					"BAAAAEUAAAAAAAAARgAAAAAAAAAAAAAARgAAAAAAAABHAAAAAAAAAAAAAABHAAAAAAAAAEgAAAAAAAAAAAAAAEgAAAAAAAAASQAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABFAAAAAAAAAEUAAAAAAAAAAAAAAAAA8L8"
+					"BQAAAKoDAAAAAAAAqwMAAAAAAAAAAAAAqwMAAAAAAACsAwAAAAAAAAAAAACsAwAAAAAAAK0DAAAAAAAAAAAAAK0DAAAAAAAArgMAAAAAAAAAAAAArgMAAAAAAACvAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqgMAAAAAAACqAwAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					24,
-					1,
-					"insert_completion",
-					{
-						"completion": "namespace",
-						"format": "text",
-						"keep_prefix": false,
-						"must_insert": false,
-						"trigger": "namespace"
-					},
-					"AgAAAEYAAAAAAAAARgAAAAAAAAADAAAAbmFlRgAAAAAAAABPAAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABJAAAAAAAAAEkAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					25,
+					10,
 					1,
 					"insert",
 					{
-						"characters": " View"
+						"characters": "#"
 					},
-					"BQAAAE8AAAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAAAABRAAAAAAAAAAAAAABRAAAAAAAAAFIAAAAAAAAAAAAAAFIAAAAAAAAAUwAAAAAAAAAAAAAAUwAAAAAAAABUAAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABPAAAAAAAAAE8AAAAAAAAAAAAAAAAA8L8"
+					"AQAAAK8DAAAAAAAAsAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArwMAAAAAAACvAwAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					26,
-					1,
-					"insert",
-					{
-						"characters": ";"
-					},
-					"AQAAAFQAAAAAAAAAVQAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABUAAAAAAAAAFQAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					27,
-					1,
-					"insert",
-					{
-						"characters": "\nna"
-					},
-					"AwAAAFUAAAAAAAAAVgAAAAAAAAAAAAAAVgAAAAAAAABXAAAAAAAAAAAAAABXAAAAAAAAAFgAAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABVAAAAAAAAAFUAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					28,
-					1,
-					"insert_completion",
-					{
-						"completion": "namespace",
-						"format": "text",
-						"keep_prefix": false,
-						"must_insert": false,
-						"trigger": "namespace"
-					},
-					"AgAAAFYAAAAAAAAAVgAAAAAAAAACAAAAbmFWAAAAAAAAAF8AAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABYAAAAAAAAAFgAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					29,
-					1,
-					"insert",
-					{
-						"characters": " Model;"
-					},
-					"BwAAAF8AAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABhAAAAAAAAAAAAAABhAAAAAAAAAGIAAAAAAAAAAAAAAGIAAAAAAAAAYwAAAAAAAAAAAAAAYwAAAAAAAABkAAAAAAAAAAAAAABkAAAAAAAAAGUAAAAAAAAAAAAAAGUAAAAAAAAAZgAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABfAAAAAAAAAF8AAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					30,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AQAAAGYAAAAAAAAAZwAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABmAAAAAAAAAGYAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					33,
-					1,
-					"left_delete",
-					null,
-					"AQAAAFQAAAAAAAAAVAAAAAAAAAABAAAAOw",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABVAAAAAAAAAFUAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					34,
+					11,
 					1,
 					"insert",
 					{
 						"characters": " "
 					},
-					"AQAAAFQAAAAAAAAAVQAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABUAAAAAAAAAFQAAAAAAAAAAAAAAAAA8L8"
+					"AQAAALADAAAAAAAAsQMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAsAMAAAAAAACwAwAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					35,
-					1,
-					"insert_snippet",
-					{
-						"contents": "{$0}"
-					},
-					"AQAAAFUAAAAAAAAAVwAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABVAAAAAAAAAFUAAAAAAAAAAAAAAAAA8L8"
+					12,
+					7,
+					"left_delete",
+					null,
+					"BwAAALADAAAAAAAAsAMAAAAAAAABAAAAIK8DAAAAAAAArwMAAAAAAAABAAAAI64DAAAAAAAArgMAAAAAAAABAAAAI60DAAAAAAAArQMAAAAAAAABAAAAI6wDAAAAAAAArAMAAAAAAAABAAAAI6sDAAAAAAAAqwMAAAAAAAABAAAACqoDAAAAAAAAqgMAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAsQMAAAAAAACxAwAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					36,
-					1,
-					"run_macro_file",
-					{
-						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
-					},
-					"AwAAAFYAAAAAAAAAVwAAAAAAAAAAAAAAVwAAAAAAAABYAAAAAAAAAAAAAABXAAAAAAAAAFsAAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABWAAAAAAAAAFYAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					39,
+					13,
 					1,
 					"insert",
 					{
 						"characters": "\n"
 					},
-					"AgAAAF0AAAAAAAAAXgAAAAAAAAAAAAAAVwAAAAAAAABXAAAAAAAAAAQAAAAgICAg",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABdAAAAAAAAAF0AAAAAAAAAAAAAAAAAP0A"
+					"AQAAAKoDAAAAAAAAqwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqgMAAAAAAACqAwAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					42,
+					14,
 					1,
 					"left_delete",
 					null,
-					"AQAAAGoAAAAAAAAAagAAAAAAAAABAAAAOw",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABrAAAAAAAAAGsAAAAAAAAA////////738"
-				],
-				[
-					43,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAGoAAAAAAAAAawAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABqAAAAAAAAAGoAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					44,
-					1,
-					"insert_snippet",
-					{
-						"contents": "{$0}"
-					},
-					"AQAAAGsAAAAAAAAAbQAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABrAAAAAAAAAGsAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					45,
-					1,
-					"run_macro_file",
-					{
-						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
-					},
-					"AwAAAGwAAAAAAAAAbQAAAAAAAAAAAAAAbQAAAAAAAABuAAAAAAAAAAAAAABtAAAAAAAAAHEAAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABsAAAAAAAAAGwAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					48,
-					1,
-					"cut",
-					null,
-					"AQAAAHUAAAAAAAAAdQAAAAAAAAAaAAAAY2xhc3MgVmlldzo6VXNlckludGVyZmFjZTs",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACPAAAAAAAAAHUAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					51,
-					1,
-					"paste",
-					null,
-					"AQAAAFcAAAAAAAAAcQAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABXAAAAAAAAAFcAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					52,
-					1,
-					"left_delete",
-					null,
-					"AgAAAHAAAAAAAAAAcAAAAAAAAAABAAAAO4YAAAAAAAAAhgAAAAAAAAAEAAAAICAgIA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABxAAAAAAAAAHEAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					53,
-					1,
-					"insert",
-					{
-						"characters": ";"
-					},
-					"AQAAAHAAAAAAAAAAcQAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABwAAAAAAAAAHAAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					57,
-					1,
-					"left_delete",
-					null,
-					"AQAAAF0AAAAAAAAAXQAAAAAAAAAGAAAAVmlldzo6",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABjAAAAAAAAAF0AAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					62,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AgAAAFYAAAAAAAAAVwAAAAAAAAAAAAAAVwAAAAAAAABbAAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABWAAAAAAAAAFYAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					65,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AgAAAHEAAAAAAAAAcgAAAAAAAAAAAAAAVwAAAAAAAABXAAAAAAAAAAQAAAAgICAg",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABxAAAAAAAAAHEAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					77,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AQAAAIMAAAAAAAAAhAAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACDAAAAAAAAAIMAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					78,
-					1,
-					"paste",
-					null,
-					"AQAAAIQAAAAAAAAA0QAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACEAAAAAAAAAIQAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					79,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AQAAANEAAAAAAAAA0gAAAAAAAAAAAAAA",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADRAAAAAAAAANEAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					82,
-					1,
-					"left_delete",
-					null,
-					"AwAAALcAAAAAAAAAtwAAAAAAAAAHAAAATW9kZWw6OqAAAAAAAAAAoAAAAAAAAAAHAAAATW9kZWw6OooAAAAAAAAAigAAAAAAAAAHAAAATW9kZWw6Og",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAMAAACKAAAAAAAAAJEAAAAAAAAAAAAAAAAA8L+gAAAAAAAAAKcAAAAAAAAAAAAAAAAA8L+3AAAAAAAAAL4AAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					86,
-					2,
-					"left_delete",
-					null,
-					"AgAAAMAAAAAAAAAAwAAAAAAAAABPAAAACgpjbGFzcyBNb2RlbDo6TmV0d29yazsKY2xhc3MgTW9kZWw6Ok5vZGVQb29sOwpjbGFzcyBNb2RlbDo6RGF0YWJhc2VDb250cm9sbGVyO78AAAAAAAAAvwAAAAAAAAABAAAACg",
-					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAPAQAAAAAAAMAAAAAAAAAAAAAAAAAA8L8"
+					"AQAAAKoDAAAAAAAAqgMAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAqwMAAAAAAACrAwAAAAAAAAAAAAAAAPC/"
 				]
 			]
 		}
@@ -498,9 +274,12 @@
 	],
 	"file_history":
 	[
+		"/D/Projects/GuessWhat/Source/GameChecker.cpp",
+		"/D/Projects/GuessWhat/Source/GameController.h",
+		"/D/GuessWhatTest/DefaultDatabase/1.gwdb-data",
+		"/D/GuessWhatTest/DefaultDatabase/DefaultDatabase.gwdb-header",
 		"/D/DefaultDatabase/1.gwdb-data",
 		"/D/DefaultDatabase/DefaultDatabase.gwdb-header",
-		"/D/Projects/GuessWhat/Source/GameChecker.cpp",
 		"/D/Projects/GuessWhat/Source/DefaultDatabase/1.gwdb-data",
 		"/D/Projects/GuessWhat/Source/View/UserInterface.cpp",
 		"/D/Projects/GuessWhat/Source/Makefile",
@@ -510,7 +289,6 @@
 		"/D/Projects/GuessWhat/Source/Main.cpp",
 		"/D/Projects/GuessWhat/Source/Model/Test-Database/TestDatabase/1.gwdb-data",
 		"/D/Projects/GuessWhat/Source/GameChecker.h",
-		"/D/Projects/GuessWhat/Source/GameController.h",
 		"/D/Projects/GuessWhat/Source/Model/Network.h",
 		"/D/Projects/GuessWhat/Source/Model/Network.cpp",
 		"/D/Projects/GuessWhat/Source/Model/Database.h",
@@ -629,33 +407,33 @@
 			[
 				{
 					"buffer": 0,
-					"file": "Source/GameController.h",
+					"file": "README.md",
 					"selected": true,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 544,
+						"buffer_size": 1249,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								214,
-								214
+								938,
+								938
 							]
 						],
 						"settings":
 						{
 							"editorconfig": true,
-							"is_init_dirty_state": false,
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/C++/C++.sublime-syntax",
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 51.2,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
