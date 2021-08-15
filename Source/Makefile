@@ -35,8 +35,11 @@ Menu.o : ./View/Menu.cpp ./View/Menu.h
 UserInterface.o : ./View/UserInterface.cpp ./View/UserInterface.h
 	g++ -c ./View/UserInterface.cpp
 
-.PHONY : clean
+.PHONY : clean sweep
 clean :
 	-rm GuessWhat $(controllerObjects) $(modelObjects) $(viewObjects)
-# 	-rm GuessWhat.config
-# 	-rm -rf DefaultDatabase
+	-rm GuessWhat.config
+	-rm -rf DefaultDatabase
+
+sweep :
+	-rm $(controllerObjects) $(modelObjects) $(viewObjects)

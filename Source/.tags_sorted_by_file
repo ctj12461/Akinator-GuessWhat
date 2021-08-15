@@ -1,19 +1,29 @@
+Controller	GameChecker.cpp	/^namespace Controller {$/;"	n	file:
+GameChecker	GameChecker.cpp	/^GameChecker::GameChecker() {$/;"	f	class:Controller::GameChecker
+getName	GameChecker.cpp	/^string GameChecker::getName() {$/;"	f	class:Controller::GameChecker
+makeDefaultConfig	GameChecker.cpp	/^void GameChecker::makeDefaultConfig() {$/;"	f	class:Controller::GameChecker
+~GameChecker	GameChecker.cpp	/^GameChecker::~GameChecker() {$/;"	f	class:Controller::GameChecker
+Controller	GameChecker.h	/^namespace Controller {$/;"	n
+GAMECHECKER_H	GameChecker.h	2;"	d
+GameChecker	GameChecker.h	/^class GameChecker {$/;"	c	namespace:Controller
 Controller	GameController.cpp	/^namespace Controller {$/;"	n	file:
+GameController	GameController.cpp	/^GameController::GameController() {$/;"	f	class:Controller::GameController
 game	GameController.cpp	/^void GameController::game() {$/;"	f	class:Controller::GameController
 init	GameController.cpp	/^void GameController::init(string name) {$/;"	f	class:Controller::GameController
 loop	GameController.cpp	/^void GameController::loop() {$/;"	f	class:Controller::GameController
 quit	GameController.cpp	/^void GameController::quit() {$/;"	f	class:Controller::GameController
+~GameController	GameController.cpp	/^GameController::~GameController() {$/;"	f	class:Controller::GameController
 Controller	GameController.h	/^namespace Controller {$/;"	n
-DatabaseController	GameController.h	/^class Model::DatabaseController;$/;"	m	class:Model	typeref:class:Model::
 GAMECONTROLLER_H	GameController.h	2;"	d
 GameController	GameController.h	/^class GameController {$/;"	c	namespace:Controller
-Network	GameController.h	/^class Model::Network;$/;"	m	class:Model	typeref:class:Model::
-NodePool	GameController.h	/^class Model::NodePool;$/;"	m	class:Model	typeref:class:Model::
-UserInterface	GameController.h	/^class View::UserInterface;$/;"	m	class:View	typeref:class:View::
+Model	GameController.h	/^namespace Model {$/;"	n
+View	GameController.h	/^namespace View {$/;"	n
 database	GameController.h	/^    Model::DatabaseController *database;$/;"	m	class:Controller::GameController
 network	GameController.h	/^    Model::Network *network;$/;"	m	class:Controller::GameController
 pool	GameController.h	/^    Model::NodePool *pool;$/;"	m	class:Controller::GameController
 ui	GameController.h	/^    View::UserInterface *ui;$/;"	m	class:Controller::GameController
+controller	Main.cpp	/^GameController controller;$/;"	v
+main	Main.cpp	/^int main() {$/;"	f
 DatabaseController	Model\Database.cpp	/^DatabaseController::DatabaseController(string name) {$/;"	f	class:Model::DatabaseController
 Model	Model\Database.cpp	/^namespace Model {$/;"	n	file:
 close	Model\Database.cpp	/^void DatabaseController::close() {$/;"	f	class:Model::DatabaseController
@@ -42,11 +52,12 @@ total	Model\Database.h	/^    UuidType total;$/;"	m	struct:Model::DatabaseAttribu
 uuid	Model\Database.h	/^    UuidType uuid;$/;"	m	struct:Model::DatabaseBlock
 ~DatabaseAttribute	Model\Database.h	/^    ~DatabaseAttribute() {}$/;"	f	struct:Model::DatabaseAttribute
 ~DatabaseBlock	Model\Database.h	/^    ~DatabaseBlock() {}$/;"	f	struct:Model::DatabaseBlock
-BranchEnum	Model\Definition.h	/^enum class BranchEnum {$/;"	c
+BranchEnum	Model\Definition.h	/^enum class BranchEnum {$/;"	c	namespace:Model
 DEFINITION	Model\Definition.h	2;"	d
-No	Model\Definition.h	/^    No, Yes$/;"	m	class:BranchEnum
-NodeEnum	Model\Definition.h	/^enum class NodeEnum {$/;"	c
-Query	Model\Definition.h	/^    Query, Answer$/;"	m	class:NodeEnum
+Model	Model\Definition.h	/^namespace Model {$/;"	n
+No	Model\Definition.h	/^    No, Yes$/;"	m	class:Model::BranchEnum
+NodeEnum	Model\Definition.h	/^enum class NodeEnum {$/;"	c	namespace:Model
+Query	Model\Definition.h	/^    Query, Answer$/;"	m	class:Model::NodeEnum
 AnswerNode	Model\ExtendedNode.cpp	/^AnswerNode::AnswerNode(string t) : LogicalNode(NodeEnum::Answer, t) {$/;"	f	class:Model::AnswerNode
 Model	Model\ExtendedNode.cpp	/^namespace Model {$/;"	n	file:
 QueryNode	Model\ExtendedNode.cpp	/^QueryNode::QueryNode(string t) : LogicalNode(NodeEnum::Query, t) {$/;"	f	class:Model::QueryNode
@@ -181,6 +192,7 @@ again	View\UserInterface.cpp	/^MenuResult UserInterface::again() {$/;"	f	class:V
 ask	View\UserInterface.cpp	/^MenuResult UserInterface::ask(string question) {$/;"	f	class:View::UserInterface
 cheer	View\UserInterface.cpp	/^void UserInterface::cheer() {$/;"	f	class:View::UserInterface
 confirm	View\UserInterface.cpp	/^MenuResult UserInterface::confirm(string answer) {$/;"	f	class:View::UserInterface
+introduce	View\UserInterface.cpp	/^void UserInterface::introduce() {$/;"	f	class:View::UserInterface
 learn	View\UserInterface.cpp	/^LearningResult UserInterface::learn(string answer) {$/;"	f	class:View::UserInterface
 quit	View\UserInterface.cpp	/^void UserInterface::quit() {$/;"	f	class:View::UserInterface
 start	View\UserInterface.cpp	/^void UserInterface::start() {$/;"	f	class:View::UserInterface

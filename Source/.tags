@@ -7,7 +7,9 @@
 AnswerNode	.\Model\ExtendedNode.cpp	/^AnswerNode::AnswerNode(string t) : LogicalNode(NodeEnum::Answer, t) {$/;"	f	class:Model::AnswerNode
 AnswerNode	.\Model\ExtendedNode.h	/^class AnswerNode : public LogicalNode {$/;"	c	namespace:Model
 BlockSize	.\Model\NodePool.h	/^    static constexpr UuidType BlockSize = 1000;$/;"	m	class:Model::DataBlock
-BranchEnum	.\Model\Definition.h	/^enum class BranchEnum {$/;"	c
+BranchEnum	.\Model\Definition.h	/^enum class BranchEnum {$/;"	c	namespace:Model
+Controller	.\GameChecker.cpp	/^namespace Controller {$/;"	n	file:
+Controller	.\GameChecker.h	/^namespace Controller {$/;"	n
 Controller	.\GameController.cpp	/^namespace Controller {$/;"	n	file:
 Controller	.\GameController.h	/^namespace Controller {$/;"	n
 DATABASE_H	.\Model\Database.h	2;"	d
@@ -19,11 +21,14 @@ DatabaseAttribute	.\Model\Database.h	/^struct DatabaseAttribute {$/;"	s	namespac
 DatabaseBlock	.\Model\Database.h	/^    DatabaseBlock() : uuid(0) {}$/;"	f	struct:Model::DatabaseBlock
 DatabaseBlock	.\Model\Database.h	/^    DatabaseBlock(UuidType id, const vector<string> &v) : uuid(id), data(v) {}$/;"	f	struct:Model::DatabaseBlock
 DatabaseBlock	.\Model\Database.h	/^struct DatabaseBlock {$/;"	s	namespace:Model
-DatabaseController	.\GameController.h	/^class Model::DatabaseController;$/;"	m	class:Model	typeref:class:Model::
 DatabaseController	.\Model\Database.cpp	/^DatabaseController::DatabaseController(string name) {$/;"	f	class:Model::DatabaseController
 DatabaseController	.\Model\Database.h	/^class DatabaseController {$/;"	c	namespace:Model
 EXTENDED_NODE	.\Model\ExtendedNode.h	2;"	d
+GAMECHECKER_H	.\GameChecker.h	2;"	d
 GAMECONTROLLER_H	.\GameController.h	2;"	d
+GameChecker	.\GameChecker.cpp	/^GameChecker::GameChecker() {$/;"	f	class:Controller::GameChecker
+GameChecker	.\GameChecker.h	/^class GameChecker {$/;"	c	namespace:Controller
+GameController	.\GameController.cpp	/^GameController::GameController() {$/;"	f	class:Controller::GameController
 GameController	.\GameController.h	/^class GameController {$/;"	c	namespace:Controller
 INPUTBOX_H	.\View\InputBox.h	2;"	d
 InputBox	.\View\InputBox.cpp	/^InputBox::InputBox(string t) : text(t) {$/;"	f	class:View::InputBox
@@ -35,8 +40,10 @@ MENU_H	.\View\Menu.h	2;"	d
 Menu	.\View\Menu.cpp	/^Menu::Menu() {$/;"	f	class:View::Menu
 Menu	.\View\Menu.h	/^class Menu {$/;"	c	namespace:View
 MenuResult	.\View\Menu.h	/^struct MenuResult {$/;"	s	namespace:View
+Model	.\GameController.h	/^namespace Model {$/;"	n
 Model	.\Model\Database.cpp	/^namespace Model {$/;"	n	file:
 Model	.\Model\Database.h	/^namespace Model {$/;"	n
+Model	.\Model\Definition.h	/^namespace Model {$/;"	n
 Model	.\Model\ExtendedNode.cpp	/^namespace Model {$/;"	n	file:
 Model	.\Model\ExtendedNode.h	/^namespace Model {$/;"	n
 Model	.\Model\LogicalNode.cpp	/^namespace Model {$/;"	n	file:
@@ -47,21 +54,19 @@ Model	.\Model\NodePool.cpp	/^namespace Model {$/;"	n	file:
 Model	.\Model\NodePool.h	/^namespace Model {$/;"	n
 NETWORK_H	.\Model\Network.h	2;"	d
 NODEPOOL_H	.\Model\NodePool.h	2;"	d
-Network	.\GameController.h	/^class Model::Network;$/;"	m	class:Model	typeref:class:Model::
 Network	.\Model\Network.cpp	/^Network::Network(NodePool *p) : pool(p), current(origin) {$/;"	f	class:Model::Network
 Network	.\Model\Network.h	/^class Network {$/;"	c	namespace:Model
-No	.\Model\Definition.h	/^    No, Yes$/;"	m	class:BranchEnum
-NodeEnum	.\Model\Definition.h	/^enum class NodeEnum {$/;"	c
-NodePool	.\GameController.h	/^class Model::NodePool;$/;"	m	class:Model	typeref:class:Model::
+No	.\Model\Definition.h	/^    No, Yes$/;"	m	class:Model::BranchEnum
+NodeEnum	.\Model\Definition.h	/^enum class NodeEnum {$/;"	c	namespace:Model
 NodePool	.\Model\NodePool.cpp	/^NodePool::NodePool(DatabaseController *p) : database(p) {$/;"	f	class:Model::NodePool
 NodePool	.\Model\NodePool.h	/^class NodePool {$/;"	c	namespace:Model
-Query	.\Model\Definition.h	/^    Query, Answer$/;"	m	class:NodeEnum
+Query	.\Model\Definition.h	/^    Query, Answer$/;"	m	class:Model::NodeEnum
 QueryNode	.\Model\ExtendedNode.cpp	/^QueryNode::QueryNode(string t) : LogicalNode(NodeEnum::Query, t) {$/;"	f	class:Model::QueryNode
 QueryNode	.\Model\ExtendedNode.h	/^class QueryNode : public LogicalNode {$/;"	c	namespace:Model
 USERINTERFACE_H	.\View\UserInterface.h	2;"	d
-UserInterface	.\GameController.h	/^class View::UserInterface;$/;"	m	class:View	typeref:class:View::
 UserInterface	.\View\UserInterface.cpp	/^UserInterface::UserInterface() {$/;"	f	class:View::UserInterface
 UserInterface	.\View\UserInterface.h	/^class UserInterface {$/;"	c	namespace:View
+View	.\GameController.h	/^namespace View {$/;"	n
 View	.\View\InputBox.cpp	/^namespace View {$/;"	n	file:
 View	.\View\InputBox.h	/^namespace View {$/;"	n
 View	.\View\Menu.cpp	/^namespace View {$/;"	n	file:
@@ -83,6 +88,7 @@ branch	.\View\UserInterface.h	/^    MenuResult branch;$/;"	m	struct:View::Learni
 cheer	.\View\UserInterface.cpp	/^void UserInterface::cheer() {$/;"	f	class:View::UserInterface
 close	.\Model\Database.cpp	/^void DatabaseController::close() {$/;"	f	class:Model::DatabaseController
 confirm	.\View\UserInterface.cpp	/^MenuResult UserInterface::confirm(string answer) {$/;"	f	class:View::UserInterface
+controller	.\Main.cpp	/^GameController controller;$/;"	v
 current	.\Model\Network.h	/^    UuidType current;$/;"	m	class:Model::Network
 data	.\Model\Database.h	/^    vector<string> data;$/;"	m	struct:Model::DatabaseBlock
 database	.\GameController.h	/^    Model::DatabaseController *database;$/;"	m	class:Controller::GameController
@@ -97,6 +103,7 @@ getAttribute	.\Model\Database.cpp	/^DatabaseAttribute DatabaseController::getAtt
 getBlock	.\Model\Database.cpp	/^DatabaseBlock DatabaseController::getBlock(UuidType id) const {$/;"	f	class:Model::DatabaseController
 getCurrentUuid	.\Model\Network.cpp	/^UuidType Network::getCurrentUuid() const {$/;"	f	class:Model::Network
 getFileName	.\Model\Database.cpp	/^string DatabaseController::getFileName(string dir, string name, string prefix) const {$/;"	f	class:Model::DatabaseController
+getName	.\GameChecker.cpp	/^string GameChecker::getName() {$/;"	f	class:Controller::GameChecker
 getSize	.\Model\NodePool.cpp	/^UuidType DataBlock::getSize() const {$/;"	f	class:Model::DataBlock
 getText	.\Model\Network.cpp	/^string Network::getText() {$/;"	f	class:Model::Network
 getUuid	.\Model\Database.h	/^    UuidType getUuid() {$/;"	f	struct:Model::DatabaseBlock
@@ -105,6 +112,7 @@ goPrevious	.\Model\Network.cpp	/^void Network::goPrevious() {$/;"	f	class:Model:
 id	.\View\Menu.h	/^    int id;$/;"	m	struct:View::MenuResult
 init	.\GameController.cpp	/^void GameController::init(string name) {$/;"	f	class:Controller::GameController
 input	.\View\InputBox.cpp	/^string InputBox::input() {$/;"	f	class:View::InputBox
+introduce	.\View\UserInterface.cpp	/^void UserInterface::introduce() {$/;"	f	class:View::UserInterface
 isEnd	.\Model\Network.cpp	/^bool Network::isEnd() {$/;"	f	class:Model::Network
 isVaild	.\Model\Network.cpp	/^bool Network::isVaild() {$/;"	f	class:Model::Network
 item	.\View\Menu.h	/^    string item;$/;"	m	struct:View::MenuResult
@@ -113,6 +121,7 @@ learn	.\View\UserInterface.cpp	/^LearningResult UserInterface::learn(string answ
 load	.\Model\Network.cpp	/^void Network::load(UuidType id) {$/;"	f	class:Model::Network
 load	.\Model\NodePool.cpp	/^void NodePool::load(function<void(LogicalNode *)> f, UuidType id) {$/;"	f	class:Model::NodePool
 loop	.\GameController.cpp	/^void GameController::loop() {$/;"	f	class:Controller::GameController
+main	.\Main.cpp	/^int main() {$/;"	f
 main	.\Model\Test-Database\Test.cpp	/^int main() {$/;"	f
 main	.\Model\Test-Network\Test.cpp	/^int main() {$/;"	f
 main	.\Model\Test-NodePool\Test.cpp	/^int main() {$/;"	f
@@ -120,6 +129,7 @@ main	.\Model\Test-Nodes\Test.cpp	/^int main() {$/;"	f
 main	.\View\Test-InputBox\Test.cpp	/^int main() {$/;"	f
 main	.\View\Test-Menu\Test.cpp	/^int main() {$/;"	f
 main	.\View\Test-UserInterface\Test.cpp	/^int main() {$/;"	f
+makeDefaultConfig	.\GameChecker.cpp	/^void GameChecker::makeDefaultConfig() {$/;"	f	class:Controller::GameChecker
 name	.\Model\Database.h	/^    string name;$/;"	m	struct:Model::DatabaseAttribute
 network	.\GameController.h	/^    Model::Network *network;$/;"	m	class:Controller::GameController
 network	.\Model\Test-Network\Test.cpp	/^Network network;$/;"	v
@@ -194,6 +204,8 @@ vec	.\Model\Test-NodePool\Test.cpp	/^vector<LogicalNode *> vec;$/;"	v
 ~DatabaseAttribute	.\Model\Database.h	/^    ~DatabaseAttribute() {}$/;"	f	struct:Model::DatabaseAttribute
 ~DatabaseBlock	.\Model\Database.h	/^    ~DatabaseBlock() {}$/;"	f	struct:Model::DatabaseBlock
 ~DatabaseController	.\Model\Database.cpp	/^DatabaseController::~DatabaseController() {$/;"	f	class:Model::DatabaseController
+~GameChecker	.\GameChecker.cpp	/^GameChecker::~GameChecker() {$/;"	f	class:Controller::GameChecker
+~GameController	.\GameController.cpp	/^GameController::~GameController() {$/;"	f	class:Controller::GameController
 ~InputBox	.\View\InputBox.cpp	/^InputBox::~InputBox() {$/;"	f	class:View::InputBox
 ~Menu	.\View\Menu.cpp	/^Menu::~Menu() {$/;"	f	class:View::Menu
 ~NodePool	.\Model\NodePool.cpp	/^NodePool::~NodePool() {$/;"	f	class:Model::NodePool

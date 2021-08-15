@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"B",
+				"BranchEnum"
+			],
+			[
 				"Game",
 				"GameController"
 			],
@@ -75,6 +79,298 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Source/GameController.h",
+			"settings":
+			{
+				"buffer_size": 544,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					23,
+					1,
+					"insert",
+					{
+						"characters": "\nnae"
+					},
+					"BAAAAEUAAAAAAAAARgAAAAAAAAAAAAAARgAAAAAAAABHAAAAAAAAAAAAAABHAAAAAAAAAEgAAAAAAAAAAAAAAEgAAAAAAAAASQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABFAAAAAAAAAEUAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					24,
+					1,
+					"insert_completion",
+					{
+						"completion": "namespace",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "namespace"
+					},
+					"AgAAAEYAAAAAAAAARgAAAAAAAAADAAAAbmFlRgAAAAAAAABPAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABJAAAAAAAAAEkAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					25,
+					1,
+					"insert",
+					{
+						"characters": " View"
+					},
+					"BQAAAE8AAAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAAAABRAAAAAAAAAAAAAABRAAAAAAAAAFIAAAAAAAAAAAAAAFIAAAAAAAAAUwAAAAAAAAAAAAAAUwAAAAAAAABUAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABPAAAAAAAAAE8AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": ";"
+					},
+					"AQAAAFQAAAAAAAAAVQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABUAAAAAAAAAFQAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					27,
+					1,
+					"insert",
+					{
+						"characters": "\nna"
+					},
+					"AwAAAFUAAAAAAAAAVgAAAAAAAAAAAAAAVgAAAAAAAABXAAAAAAAAAAAAAABXAAAAAAAAAFgAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABVAAAAAAAAAFUAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					28,
+					1,
+					"insert_completion",
+					{
+						"completion": "namespace",
+						"format": "text",
+						"keep_prefix": false,
+						"must_insert": false,
+						"trigger": "namespace"
+					},
+					"AgAAAFYAAAAAAAAAVgAAAAAAAAACAAAAbmFWAAAAAAAAAF8AAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABYAAAAAAAAAFgAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					29,
+					1,
+					"insert",
+					{
+						"characters": " Model;"
+					},
+					"BwAAAF8AAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABhAAAAAAAAAAAAAABhAAAAAAAAAGIAAAAAAAAAAAAAAGIAAAAAAAAAYwAAAAAAAAAAAAAAYwAAAAAAAABkAAAAAAAAAAAAAABkAAAAAAAAAGUAAAAAAAAAAAAAAGUAAAAAAAAAZgAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABfAAAAAAAAAF8AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					30,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAGYAAAAAAAAAZwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABmAAAAAAAAAGYAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					33,
+					1,
+					"left_delete",
+					null,
+					"AQAAAFQAAAAAAAAAVAAAAAAAAAABAAAAOw",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABVAAAAAAAAAFUAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					34,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAFQAAAAAAAAAVQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABUAAAAAAAAAFQAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					35,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{$0}"
+					},
+					"AQAAAFUAAAAAAAAAVwAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABVAAAAAAAAAFUAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					36,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+					},
+					"AwAAAFYAAAAAAAAAVwAAAAAAAAAAAAAAVwAAAAAAAABYAAAAAAAAAAAAAABXAAAAAAAAAFsAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABWAAAAAAAAAFYAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					39,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAF0AAAAAAAAAXgAAAAAAAAAAAAAAVwAAAAAAAABXAAAAAAAAAAQAAAAgICAg",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABdAAAAAAAAAF0AAAAAAAAAAAAAAAAAP0A"
+				],
+				[
+					42,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGoAAAAAAAAAagAAAAAAAAABAAAAOw",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABrAAAAAAAAAGsAAAAAAAAA////////738"
+				],
+				[
+					43,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAGoAAAAAAAAAawAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABqAAAAAAAAAGoAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					44,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{$0}"
+					},
+					"AQAAAGsAAAAAAAAAbQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABrAAAAAAAAAGsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					45,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+					},
+					"AwAAAGwAAAAAAAAAbQAAAAAAAAAAAAAAbQAAAAAAAABuAAAAAAAAAAAAAABtAAAAAAAAAHEAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABsAAAAAAAAAGwAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					48,
+					1,
+					"cut",
+					null,
+					"AQAAAHUAAAAAAAAAdQAAAAAAAAAaAAAAY2xhc3MgVmlldzo6VXNlckludGVyZmFjZTs",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACPAAAAAAAAAHUAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					51,
+					1,
+					"paste",
+					null,
+					"AQAAAFcAAAAAAAAAcQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABXAAAAAAAAAFcAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					52,
+					1,
+					"left_delete",
+					null,
+					"AgAAAHAAAAAAAAAAcAAAAAAAAAABAAAAO4YAAAAAAAAAhgAAAAAAAAAEAAAAICAgIA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABxAAAAAAAAAHEAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					53,
+					1,
+					"insert",
+					{
+						"characters": ";"
+					},
+					"AQAAAHAAAAAAAAAAcQAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABwAAAAAAAAAHAAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					57,
+					1,
+					"left_delete",
+					null,
+					"AQAAAF0AAAAAAAAAXQAAAAAAAAAGAAAAVmlldzo6",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABjAAAAAAAAAF0AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					62,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAFYAAAAAAAAAVwAAAAAAAAAAAAAAVwAAAAAAAABbAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABWAAAAAAAAAFYAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					65,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAHEAAAAAAAAAcgAAAAAAAAAAAAAAVwAAAAAAAABXAAAAAAAAAAQAAAAgICAg",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABxAAAAAAAAAHEAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					77,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAIMAAAAAAAAAhAAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACDAAAAAAAAAIMAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					78,
+					1,
+					"paste",
+					null,
+					"AQAAAIQAAAAAAAAA0QAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACEAAAAAAAAAIQAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					79,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAANEAAAAAAAAA0gAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADRAAAAAAAAANEAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					82,
+					1,
+					"left_delete",
+					null,
+					"AwAAALcAAAAAAAAAtwAAAAAAAAAHAAAATW9kZWw6OqAAAAAAAAAAoAAAAAAAAAAHAAAATW9kZWw6OooAAAAAAAAAigAAAAAAAAAHAAAATW9kZWw6Og",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAMAAACKAAAAAAAAAJEAAAAAAAAAAAAAAAAA8L+gAAAAAAAAAKcAAAAAAAAAAAAAAAAA8L+3AAAAAAAAAL4AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					86,
+					2,
+					"left_delete",
+					null,
+					"AgAAAMAAAAAAAAAAwAAAAAAAAABPAAAACgpjbGFzcyBNb2RlbDo6TmV0d29yazsKY2xhc3MgTW9kZWw6Ok5vZGVQb29sOwpjbGFzcyBNb2RlbDo6RGF0YWJhc2VDb250cm9sbGVyO78AAAAAAAAAvwAAAAAAAAABAAAACg",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAPAQAAAAAAAMAAAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		}
 	],
 	"build_system": "Packages/User/C++ for Sublime Text.sublime-build",
 	"build_system_choices":
@@ -196,18 +492,25 @@
 	},
 	"expanded_folders":
 	[
+		"/D/Projects/GuessWhat",
+		"/D/Projects/GuessWhat/Source",
+		"/D/Projects/GuessWhat/Source/View"
 	],
 	"file_history":
 	[
-		"/D/Projects/GuessWhat/Source/Makefile",
-		"/D/Projects/GuessWhat/Source/Main.cpp",
+		"/D/DefaultDatabase/1.gwdb-data",
+		"/D/DefaultDatabase/DefaultDatabase.gwdb-header",
+		"/D/Projects/GuessWhat/Source/GameChecker.cpp",
+		"/D/Projects/GuessWhat/Source/DefaultDatabase/1.gwdb-data",
 		"/D/Projects/GuessWhat/Source/View/UserInterface.cpp",
+		"/D/Projects/GuessWhat/Source/Makefile",
 		"/D/Projects/GuessWhat/Source/GameController.cpp",
+		"/D/Projects/GuessWhat/Source/View/UserInterface.h",
+		"/D/Projects/GuessWhat/Source/Model/Definition.h",
+		"/D/Projects/GuessWhat/Source/Main.cpp",
 		"/D/Projects/GuessWhat/Source/Model/Test-Database/TestDatabase/1.gwdb-data",
 		"/D/Projects/GuessWhat/Source/GameChecker.h",
-		"/D/Projects/GuessWhat/Source/GameChecker.cpp",
 		"/D/Projects/GuessWhat/Source/GameController.h",
-		"/D/Projects/GuessWhat/Source/View/UserInterface.h",
 		"/D/Projects/GuessWhat/Source/Model/Network.h",
 		"/D/Projects/GuessWhat/Source/Model/Network.cpp",
 		"/D/Projects/GuessWhat/Source/Model/Database.h",
@@ -221,7 +524,6 @@
 		"/D/Projects/GuessWhat/Source/Model/Test-Database/Makefile",
 		"/D/Projects/GuessWhat/Source/Model/Test-Database/Test.cpp",
 		"/D/Projects/GuessWhat/Prototype/database.txt",
-		"/D/Projects/GuessWhat/Source/Model/Definition.h",
 		"/D/Projects/GuessWhat/Source/View/InputBox.h",
 		"/D/Projects/GuessWhat/Source/View/Menu.h",
 		"/D/Programs/Sublime Merge/Data/Packages/User/Preferences.sublime-settings",
@@ -325,6 +627,41 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Source/GameController.h",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								214,
+								214
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.2,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
 			]
 		}
 	],

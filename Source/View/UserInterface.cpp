@@ -68,7 +68,7 @@ MenuResult UserInterface::confirm(string answer) {
     menu.addItem("Yes");
     menu.addItem("No");
     cout << endl;
-    cout << "Is who you think " + answer << "?" << endl;
+    cout << "Is what you think " + answer << "?" << endl;
     return menu.show();
 }
 
@@ -91,7 +91,7 @@ LearningResult UserInterface::learn(string answer) {
     /** 询问正确答案 */
     cout << endl;
     InputBox box;
-    box.setText("Who is he or she?");
+    box.setText("Who is he or she or what is it?");
     string newAnswer = box.input();
 
     /** 询问新的问题 */
@@ -106,7 +106,7 @@ LearningResult UserInterface::learn(string answer) {
     Menu menu;
     menu.addItem("Yes");
     menu.addItem("No");
-    cout << "What's the answer if he or she is "s + newAnswer + "?" << endl;
+    cout << "What's the answer if you think "s + newAnswer + "?" << endl;
     MenuResult res = menu.show();
 
     /** 感谢 */

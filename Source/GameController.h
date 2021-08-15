@@ -3,10 +3,19 @@
 
 #include <string>
 
-class View::UserInterface;
-class Model::Network;
-class Model::NodePool;
-class Model::DatabaseController;
+namespace View {
+
+class UserInterface;
+
+}
+
+namespace Model {
+
+class Network;
+class NodePool;
+class DatabaseController;
+
+}
 
 using namespace std;
 

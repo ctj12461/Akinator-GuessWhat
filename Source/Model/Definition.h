@@ -20,6 +20,8 @@
  * [UUID] [PreviousUUID] Answer [Text]
  */
 
+namespace Model {
+
 using UuidType = unsigned long long;
 
 enum class NodeEnum {
@@ -29,5 +31,7 @@ enum class NodeEnum {
 enum class BranchEnum {
     No, Yes
 };
+
+}
 
 #endif

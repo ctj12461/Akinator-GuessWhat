@@ -74,7 +74,7 @@ void GameController::quit() {
 void GameController::game() {
     network->reset();
     /** 询问问题，一步步推测答案 */
-    while (ui->isEnd() == false) {
+    while (network->isEnd() == false) {
         /** 获得用户回答 */
         View::MenuResult res = ui->ask(network->getText());
         if (res.item == "Yes"s)
@@ -88,8 +88,13 @@ void GameController::game() {
         ui->cheer();
     } else {
         /** 学习 */
-        View::LearnignResult res = ui->learn(network->getText());
-        network->extend(res.question, res.answer, res.branch);
+        View::LearningResult res = ui->learn(network->getText());
+        Model::BranchEnum branch;
+        if (res.branch.item == "Yes"s)
+            branch = Model::BranchEnum::Yes;
+        else
+            branch = Model::BranchEnum::No;
+        network->extend(res.question, res.answer, branch);
     }
 }
 
