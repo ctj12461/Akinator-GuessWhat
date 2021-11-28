@@ -102,7 +102,7 @@ get	.\Model\NodePool.cpp	/^LogicalNode *DataBlock::get(UuidType id) const {$/;"	
 getAttribute	.\Model\Database.cpp	/^DatabaseAttribute DatabaseController::getAttribute() const {$/;"	f	class:Model::DatabaseController
 getBlock	.\Model\Database.cpp	/^DatabaseBlock DatabaseController::getBlock(UuidType id) const {$/;"	f	class:Model::DatabaseController
 getCurrentUuid	.\Model\Network.cpp	/^UuidType Network::getCurrentUuid() const {$/;"	f	class:Model::Network
-getFileName	.\Model\Database.cpp	/^string DatabaseController::getFileName(string dir, string name, string prefix) const {$/;"	f	class:Model::DatabaseController
+getFileName	.\Model\Database.cpp	/^string DatabaseController::getFileName(string dir, string name, string suffix) const {$/;"	f	class:Model::DatabaseController
 getName	.\GameChecker.cpp	/^string GameChecker::getName() {$/;"	f	class:Controller::GameChecker
 getSize	.\Model\NodePool.cpp	/^UuidType DataBlock::getSize() const {$/;"	f	class:Model::DataBlock
 getText	.\Model\Network.cpp	/^string Network::getText() {$/;"	f	class:Model::Network
@@ -114,7 +114,7 @@ init	.\GameController.cpp	/^void GameController::init(string name) {$/;"	f	class
 input	.\View\InputBox.cpp	/^string InputBox::input() {$/;"	f	class:View::InputBox
 introduce	.\View\UserInterface.cpp	/^void UserInterface::introduce() {$/;"	f	class:View::UserInterface
 isEnd	.\Model\Network.cpp	/^bool Network::isEnd() {$/;"	f	class:Model::Network
-isVaild	.\Model\Network.cpp	/^bool Network::isVaild() {$/;"	f	class:Model::Network
+isValid	.\Model\Network.cpp	/^bool Network::isValid() {$/;"	f	class:Model::Network
 item	.\View\Menu.h	/^    string item;$/;"	m	struct:View::MenuResult
 items	.\View\Menu.h	/^    vector<string> items;$/;"	m	class:View::Menu
 learn	.\View\UserInterface.cpp	/^LearningResult UserInterface::learn(string answer) {$/;"	f	class:View::UserInterface

@@ -29,7 +29,7 @@ Model	Model\Database.cpp	/^namespace Model {$/;"	n	file:
 close	Model\Database.cpp	/^void DatabaseController::close() {$/;"	f	class:Model::DatabaseController
 getAttribute	Model\Database.cpp	/^DatabaseAttribute DatabaseController::getAttribute() const {$/;"	f	class:Model::DatabaseController
 getBlock	Model\Database.cpp	/^DatabaseBlock DatabaseController::getBlock(UuidType id) const {$/;"	f	class:Model::DatabaseController
-getFileName	Model\Database.cpp	/^string DatabaseController::getFileName(string dir, string name, string prefix) const {$/;"	f	class:Model::DatabaseController
+getFileName	Model\Database.cpp	/^string DatabaseController::getFileName(string dir, string name, string suffix) const {$/;"	f	class:Model::DatabaseController
 open	Model\Database.cpp	/^void DatabaseController::open(string name) {$/;"	f	class:Model::DatabaseController
 setAttribute	Model\Database.cpp	/^void DatabaseController::setAttribute(DatabaseAttribute attr) {$/;"	f	class:Model::DatabaseController
 setBlock	Model\Database.cpp	/^void DatabaseController::setBlock(UuidType id, DatabaseBlock block) {$/;"	f	class:Model::DatabaseController
@@ -101,7 +101,7 @@ getText	Model\Network.cpp	/^string Network::getText() {$/;"	f	class:Model::Netwo
 goNext	Model\Network.cpp	/^void Network::goNext(BranchEnum b) {$/;"	f	class:Model::Network
 goPrevious	Model\Network.cpp	/^void Network::goPrevious() {$/;"	f	class:Model::Network
 isEnd	Model\Network.cpp	/^bool Network::isEnd() {$/;"	f	class:Model::Network
-isVaild	Model\Network.cpp	/^bool Network::isVaild() {$/;"	f	class:Model::Network
+isValid	Model\Network.cpp	/^bool Network::isValid() {$/;"	f	class:Model::Network
 load	Model\Network.cpp	/^void Network::load(UuidType id) {$/;"	f	class:Model::Network
 next	Model\Network.cpp	/^UuidType Network::next(UuidType now, BranchEnum b) {$/;"	f	class:Model::Network
 reset	Model\Network.cpp	/^void Network::reset() {$/;"	f	class:Model::Network

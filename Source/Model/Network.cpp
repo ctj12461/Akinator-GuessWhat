@@ -36,7 +36,7 @@ Network::~Network() noexcept {
  * @date   2021-08-01
  */
 string Network::getText() {
-    if (isVaild() == false)
+    if (isValid() == false)
         return string("");
     return deref(current)->getText();
 }
@@ -46,7 +46,7 @@ string Network::getText() {
  * @return 判断结果
  * @date   2021-08-01
  */
-bool Network::isVaild() {
+bool Network::isValid() {
     if (current == LogicalNode::null)
         return false;
     return deref(current) != nullptr;
@@ -58,7 +58,7 @@ bool Network::isVaild() {
  * @date   2021-08-01
  */
 bool Network::isEnd() {
-    if (isVaild() == false)
+    if (isValid() == false)
         return true;
     return deref(current)->isEnd();
 }
@@ -111,7 +111,7 @@ void Network::setNodePool(NodePool *p) {
  * @date  2021-08-01
  */
 void Network::goNext(BranchEnum b) {
-    if (isVaild() == false)
+    if (isValid() == false)
         return;
     if (deref(current)->getType() == NodeEnum::Answer)
         return;
@@ -124,7 +124,7 @@ void Network::goNext(BranchEnum b) {
  * @date  2021-08-06
  */
 void Network::goPrevious() {
-    if (isVaild() == false)
+    if (isValid() == false)
         return;
     if (deref(current)->getPrevious() == LogicalNode::null)
         return;

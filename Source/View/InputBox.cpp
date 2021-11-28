@@ -46,7 +46,7 @@ string InputBox::input() {
     do {
         getline(cin, in, '\n');
         if (in.size() == 0 && first == false) {
-            cout << "Invaild input." << endl;
+            cout << "Invalid input." << endl;
             cout << "> ";
         }
         first = false;

@@ -53,7 +53,7 @@ MenuResult Menu::show() {
         cin >> choice;
         /** 检查输入是否合法 */
         if (choice > items.size() || choice < 1) {
-            cout << "Invaild input." << endl;
+            cout << "Invalid input." << endl;
             cout << "> ";
         }
     } while (choice > items.size() || choice < 1);

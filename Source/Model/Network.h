@@ -19,7 +19,7 @@ public:
     ~Network() noexcept;
     
     string getText();
-    bool isVaild();
+    bool isValid();
     bool isEnd();
     UuidType getCurrentUuid() const;
     UuidType size() const;

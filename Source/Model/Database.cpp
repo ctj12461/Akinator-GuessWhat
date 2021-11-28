@@ -105,15 +105,15 @@ void DatabaseController::setBlock(UuidType id, DatabaseBlock block) {
 }
 
 /**
- * 返回带路径文件名 (dir/name.prefix)
+ * 返回带路径文件名 (dir/name.suffix)
  * @param  dir        目录名
  * @param  name       文件名
- * @param  prefix     后缀
+ * @param  suffix     后缀
  * @return            处理后的文件名
  * @date   2021-08-06
  */
-string DatabaseController::getFileName(string dir, string name, string prefix) const {
-    return dir + string("/") + name + string(".") + prefix;
+string DatabaseController::getFileName(string dir, string name, string suffix) const {
+    return dir + string("/") + name + string(".") + suffix;
 }
 
 }
